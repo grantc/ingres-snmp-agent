@@ -1,0 +1,350 @@
+Binary file agent/mibgroup/host/.libs/hr_filesys.o matches
+Binary file agent/mibgroup/host/.libs/hr_disk.o matches
+Binary file agent/mibgroup/host/hr_disk.o matches
+agent/mibgroup/host/.svn/entries:e0b8c161ecd187bd2c31c1690c4fc192
+agent/mibgroup/tut/ifTable/ifTable_subagent.c:        init_master_agent();    /* open the port to listen on (defaults to udp:161) */
+agent/mibgroup/tut/ifTable/ifTable-README-ifTable.txt: * Enum range: 151/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221), ciscoISLvlan(222), actelisMetaLOOP(223), fcipLink(224), rpr(225), qam(226), lmp(227), cblVectaStar(228), docsCableMCmtsDownstream(229), adsl2(230)
+agent/mibgroup/tut/ifTable/.svn/text-base/ifTable_subagent.c.svn-base:        init_master_agent();    /* open the port to listen on (defaults to udp:161) */
+agent/mibgroup/tut/ifTable/.svn/text-base/ifTable_data_get.c.svn-base: * Enum range: 146/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221)
+agent/mibgroup/tut/ifTable/.svn/text-base/ifTable-README-ifTable.txt.svn-base: * Enum range: 151/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221), ciscoISLvlan(222), actelisMetaLOOP(223), fcipLink(224), rpr(225), qam(226), lmp(227), cblVectaStar(228), docsCableMCmtsDownstream(229), adsl2(230)
+agent/mibgroup/tut/ifTable/.svn/text-base/ifTable_enums.h.svn-base:#define IANAIFTYPE_IEEE8023ADLAG  161
+agent/mibgroup/tut/ifTable/ifTable_enums.h:#define IANAIFTYPE_IEEE8023ADLAG  161
+agent/mibgroup/tut/ifTable/ifTable_data_get.c: * Enum range: 146/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221)
+agent/mibgroup/if-mib/.svn/entries:d7d6f800abcaac1f9e161404d1eb99e9
+agent/mibgroup/if-mib/ifTable/ifTable.c: * Enum range: 149/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221), ciscoISLvlan(222), actelisMetaLOOP(223), fcipLink(224)
+agent/mibgroup/if-mib/ifTable/.svn/text-base/ifTable.c.svn-base: * Enum range: 149/256. Values:  other(1), regular1822(2), hdh1822(3), ddnX25(4), rfc877x25(5), ethernetCsmacd(6), iso88023Csmacd(7), iso88024TokenBus(8), iso88025TokenRing(9), iso88026Man(10), starLan(11), proteon10Mbit(12), proteon80Mbit(13), hyperchannel(14), fddi(15), lapb(16), sdlc(17), ds1(18), e1(19), basicISDN(20), primaryISDN(21), propPointToPointSerial(22), ppp(23), softwareLoopback(24), eon(25), ethernet3Mbit(26), nsip(27), slip(28), ultra(29), ds3(30), sip(31), frameRelay(32), rs232(33), para(34), arcnet(35), arcnetPlus(36), atm(37), miox25(38), sonet(39), x25ple(40), iso88022llc(41), localTalk(42), smdsDxi(43), frameRelayService(44), v35(45), hssi(46), hippi(47), modem(48), aal5(49), sonetPath(50), sonetVT(51), smdsIcip(52), propVirtual(53), propMultiplexor(54), ieee80212(55), fibreChannel(56), hippiInterface(57), frameRelayInterconnect(58), aflane8023(59), aflane8025(60), cctEmul(61), fastEther(62), isdn(63), v11(64), v36(65), g703at64k(66), g703at2mb(67), qllc(68), fastEtherFX(69), channel(70), ieee80211(71), ibm370parChan(72), escon(73), dlsw(74), isdns(75), isdnu(76), lapd(77), ipSwitch(78), rsrb(79), atmLogical(80), ds0(81), ds0Bundle(82), bsc(83), async(84), cnr(85), iso88025Dtr(86), eplrs(87), arap(88), propCnls(89), hostPad(90), termPad(91), frameRelayMPI(92), x213(93), adsl(94), radsl(95), sdsl(96), vdsl(97), iso88025CRFPInt(98), myrinet(99), voiceEM(100), voiceFXO(101), voiceFXS(102), voiceEncap(103), voiceOverIp(104), atmDxi(105), atmFuni(106), atmIma(107), pppMultilinkBundle(108), ipOverCdlc(109), ipOverClaw(110), stackToStack(111), virtualIpAddress(112), mpc(113), ipOverAtm(114), iso88025Fiber(115), tdlc(116), gigabitEthernet(117), hdlc(118), lapf(119), v37(120), x25mlp(121), x25huntGroup(122), trasnpHdlc(123), interleave(124), fast(125), ip(126), docsCableMaclayer(127), docsCableDownstream(128), docsCableUpstream(129), a12MppSwitch(130), tunnel(131), coffee(132), ces(133), atmSubInterface(134), l2vlan(135), l3ipvlan(136), l3ipxvlan(137), digitalPowerline(138), mediaMailOverIp(139), dtm(140), dcn(141), ipForward(142), msdsl(143), ieee1394(144), if_gsn(145), dvbRccMacLayer(146), dvbRccDownstream(147), dvbRccUpstream(148), atmVirtual(149), mplsTunnel(150), srp(151), voiceOverAtm(152), voiceOverFrameRelay(153), idsl(154), compositeLink(155), ss7SigLink(156), propWirelessP2P(157), frForward(158), rfc1483(159), usb(160), ieee8023adLag(161), bgppolicyaccounting(162), frf16MfrBundle(163), h323Gatekeeper(164), h323Proxy(165), mpls(166), mfSigLink(167), hdsl2(168), shdsl(169), ds1FDL(170), pos(171), dvbAsiIn(172), dvbAsiOut(173), plc(174), nfas(175), tr008(176), gr303RDT(177), gr303IDT(178), isup(179), propDocsWirelessMaclayer(180), propDocsWirelessDownstream(181), propDocsWirelessUpstream(182), hiperlan2(183), propBWAp2Mp(184), sonetOverheadChannel(185), digitalWrapperOverheadChannel(186), aal2(187), radioMAC(188), atmRadio(189), imt(190), mvl(191), reachDSL(192), frDlciEndPt(193), atmVciEndPt(194), opticalChannel(195), opticalTransport(196), propAtm(197), voiceOverCable(198), infiniband(199), teLink(200), q2931(201), virtualTg(202), sipTg(203), sipSig(204), docsCableUpstreamChannel(205), econet(206), pon155(207), pon622(208), bridge(209), linegroup(210), voiceEMFGD(211), voiceFGDEANA(212), voiceDID(213), mpegTransport(214), sixToFour(215), gtp(216), pdnEtherLoop1(217), pdnEtherLoop2(218), opticalChannelGroup(219), homepna(220), gfp(221), ciscoISLvlan(222), actelisMetaLOOP(223), fcipLink(224)
+agent/mibgroup/if-mib/ifTable/.svn/text-base/ifTable_constants.h.svn-base:#define IANAIFTYPE_IEEE8023ADLAG  161
+agent/mibgroup/if-mib/ifTable/ifTable_constants.h:#define IANAIFTYPE_IEEE8023ADLAG  161
+Binary file agent/mibgroup/ingres/old/table/test/.svn/text-base/cursor.svn-base matches
+Binary file agent/mibgroup/ingres/old/table/test/cursor matches
+agent/mibgroup/ingres/old/table/ima/dmfcache/.orig/.svn/entries:c069f2b8e15b9e7c2b7b388ba5d9a161
+agent/mibgroup/ingres/old/table/ima/dmfcache/.new/.svn/entries:c069f2b8e15b9e7c2b7b388ba5d9a161
+agent/mibgroup/ucd-snmp/.svn/entries:843c161a1cd6f7ea3930b71a7638a745
+agent/mibgroup/ip-mib/ipv4InterfaceTable/ipv4InterfaceTable_subagent.c:        init_master_agent();    /* open the port to listen on (defaults to udp:161) */
+agent/mibgroup/ip-mib/ipv4InterfaceTable/.svn/text-base/ipv4InterfaceTable_subagent.c.svn-base:        init_master_agent();    /* open the port to listen on (defaults to udp:161) */
+agent/mibgroup/ip-mib/ipSystemStatsTable/.svn/entries:f53f4a053bb782e7161fa828ceb959c0
+Binary file agent/mibgroup/ip-mib/ipAddressTable/.libs/ipAddressTable.o matches
+Binary file agent/mibgroup/ip-mib/ipAddressTable/ipAddressTable.o matches
+Binary file agent/mibgroup/ip-mib/inetNetToMediaTable/.libs/inetNetToMediaTable_interface.o matches
+agent/mibgroup/ip-mib/inetNetToMediaTable/.svn/entries:06ca501d68161d7e758793249d04fafd
+Binary file agent/mibgroup/ip-mib/inetNetToMediaTable/inetNetToMediaTable_interface.o matches
+Binary file agent/mibgroup/ip-forward-mib/inetCidrRouteTable/.libs/inetCidrRouteTable.o matches
+Binary file agent/mibgroup/ip-forward-mib/inetCidrRouteTable/inetCidrRouteTable.o matches
+Binary file agent/.libs/.svn/text-base/libnetsnmpmibs.so.15.1.0T.svn-base matches
+Binary file agent/.libs/snmpd matches
+agent/.svn/text-base/snmp_agent.c.svn-base:                 * comments for revision 1.161), but it causes a problem for
+Binary file agent/helpers/.libs/libnetsnmphelpers.a matches
+agent/helpers/.svn/entries:f19f956517f161567eaa153983d1bd0c
+agent/snmp_agent.c:                 * comments for revision 1.161), but it causes a problem for
+ChangeLog:   NEWS: perl: BUG: 1619827: link libnetsnmpagent/libnetsnmptrapd
+ChangeLog:   NEWS: snmplib: BUG: 1619827: link net-snmp libraries and binaries
+ChangeLog:	  NEWS: snmplib: BUG: 1619827: link against needed external
+ChangeLog:	  CHANGES: snmpd: patch: 1617255: fix length of the history array
+ChangeLog:	  NEWS: python: PATCH: 1716114: Let python build in source tree
+ChangeLog:   CHANGES: documentation: BUG: 1614104: broken snmpd(8) manual page in 5.4
+ChangeLog:   CHANGES: snmplib: PATCH: 1616912: from "Magnus Fromreide": fix memory leak in snmp_udp_transport
+ChangeLog:   NEWS: BUG: 1611524: fix tcp connection table fd leak
+ChangeLog:   * testing/tests/: T160rfc1213, T161rfc1213, T162rfc1213
+ChangeLog:     tests/T161rfc1213, tests/T162rfc1213:
+ChangeLog:   Listen on port 162 (rather than 161) if a (bare) interface
+ChangeLog:   apply patch [ 831161 ] netsnmp_get_debug_helper crashes snmpd
+ChangeLog:   Apply patch from bug report 581618 (also applicable to dynix)
+ChangeLog:   - (snmp_agent.c): Um, default to port 161.  Opps.
+ChangeLog:   Apply patch from bug report 581618 (also applicable to dynix)
+ChangeLog:	- (snmp_agent.c): Um, default to port 161.  Opps.
+CHANGES:      - [BUG 1619827]: link against needed external
+CHANGES:      - [BUG 1619827]: link net-snmp libraries and binaries
+CHANGES:      - [PATCH 1616912]: fix
+CHANGES:      - patch: 1617255: fix length of the history array
+CHANGES:      - [BUG 1614104]: broken snmpd(8) manual page
+CHANGES:      - [BUG 1619827]: link libnetsnmpagent/libnetsnmptrapd
+CHANGES:      - [PATCH 1716114]: Let python build in source tree
+CHANGES:      - [BUG 1611524]: fix tcp connection table fd leak
+config.log:configure:16153: checking dynamic linker characteristics
+config.log:configure:31616: checking if we are in the source tree so we can install Perl modules
+config.log:configure:31619: result: Yes
+config.log:conftest.c:161:29: error: netinet/tcp_fsm.h: No such file or directory
+config.log:conftest.c:161:25: error: sys/protosw.h: No such file or directory
+doc/rfc/snmpV1/.svn/text-base/rfc1157.txt.svn-base:   A protocol entity receives messages at UDP port 161 on the host with
+doc/rfc/snmpV1/rfc1157.txt:   A protocol entity receives messages at UDP port 161 on the host with
+doc/rfc/smiV2/.svn/text-base/rfc2578.txt.svn-base:        IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/smiV2/.svn/text-base/rfc2578.txt.svn-base:   (18446744073709551615 decimal), when it wraps around and starts
+doc/rfc/smiV2/rfc2578.txt:        IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/smiV2/rfc2578.txt:   (18446744073709551615 decimal), when it wraps around and starts
+doc/rfc/snmpV2/.svn/text-base/rfc1902.txt.svn-base:        IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/snmpV2/.svn/text-base/rfc1902.txt.svn-base:   (18446744073709551615 decimal), when it wraps around and starts
+doc/rfc/snmpV2/.svn/text-base/rfc1906.txt.svn-base:   acting in an agent role to listen on UDP port 161.  Further, it is
+doc/rfc/snmpV2/rfc1906.txt:   acting in an agent role to listen on UDP port 161.  Further, it is
+doc/rfc/snmpV2/rfc1902.txt:        IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/snmpV2/rfc1902.txt:   (18446744073709551615 decimal), when it wraps around and starts
+doc/rfc/snmpV3/.svn/text-base/rfc3417.txt.svn-base:   supporting command responder applications to listen on UDP port 161.
+doc/rfc/snmpV3/.svn/text-base/rfc3416.txt.svn-base:                 IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/snmpV3/rfc3416.txt:                 IMPLICIT INTEGER (0..18446744073709551615)
+doc/rfc/snmpV3/rfc3417.txt:   supporting command responder applications to listen on UDP port 161.
+FAQ:  will attempt to listen on the standard SNMP port 161 (or 162 for the
+FAQ:	- Blocking access to port 161 from outside your organisation
+FAQ:			snmpd 127.0.0.1:161
+FAQ:			snmpd 10.0.0.1:6161
+FAQ:  will listen on port 6161, on the (internal network) interface with
+FAQ:			snmpd 127.0.0.1:161 127.0.0.1:6161
+include/net-snmp/agent/.svn/text-base/ds_agent.h.svn-base:#define NETSNMP_DS_AGENT_PORTS    2     /* localhost:9161,tcp:localhost:9161... */
+include/net-snmp/agent/.svn/entries:d68f0c0c71604f161c581d6420ecd23d
+include/net-snmp/agent/ds_agent.h:#define NETSNMP_DS_AGENT_PORTS    2     /* localhost:9161,tcp:localhost:9161... */
+include/net-snmp/library/snmp.h:#define SNMP_PORT	    161 /* standard UDP port for SNMP agents
+include/net-snmp/library/snmp.h:#define SNMP_MSG_GETNEXT    (ASN_CONTEXT | ASN_CONSTRUCTOR | 0x1) /* a1=161 */
+include/net-snmp/library/.svn/text-base/snmp.h.svn-base:#define SNMP_PORT	    161 /* standard UDP port for SNMP agents
+include/net-snmp/library/.svn/text-base/snmp.h.svn-base:#define SNMP_MSG_GETNEXT    (ASN_CONTEXT | ASN_CONSTRUCTOR | 0x1) /* a1=161 */
+include/net-snmp/library/.svn/entries:3867ffe3482d1460d3a16420eade161a
+include/net-snmp/data_access/.svn/entries:cfed4ecfdf8d161b9b576d8ba74f8647
+include/net-snmp/system/.svn/entries:1f1454161f1fb081f203801a668940f0
+include/ucd-snmp/.svn/entries:1dfb65161af209024a31ddda4df13abc
+include/ucd-snmp/.svn/entries:09f34cb161e7cbb29942b5a6f2f8e08c
+local/snmpconf.dir/snmpd-data/operation:info  interface on the default SNMP port (161).  This allows you to
+local/snmpconf.dir/snmpd-data/.svn/text-base/operation.svn-base:info  interface on the default SNMP port (161).  This allows you to
+local/snmpconf.dir/snmpd-data/.svn/entries:11d96358d57c4d89ff161e08a69bbf68
+local/.svn/text-base/tkmib.svn-base:	'RemotePort'   => 161,
+local/tkmib:	'RemotePort'   => 161,
+local/mib2c-conf.d/subagent.m2c:    init_master_agent();  /* open the port to listen on (defaults to udp:161) */
+local/mib2c-conf.d/.svn/text-base/subagent.m2c.svn-base:    init_master_agent();  /* open the port to listen on (defaults to udp:161) */
+man/snmpd.conf.5.def:listen on UDP port 161 on all IPv4 interfaces.
+man/snmp_agent_api.3:      init_master_agent();  /*  Listen on default port (161).  */
+man/snmp_agent_api.3:on its default UDP port of 161.
+man/snmpnetstat.1.def:with the agent, using UDP/IPv4 to port 161 of the
+man/snmptest.1:communication with the agent, using UDP/IPv4 to port 161
+man/snmp.conf.5:If not specified, the default value for this token is 161.
+man/snmptable.1:communication with the agent, using UDP/IPv4 to port 161
+man/snmpstatus.1:the agent, using UDP/IPv4 to port 161 of the given target host.
+man/snmptest.1.def:communication with the agent, using UDP/IPv4 to port 161
+man/snmpcmd.1.def:attempted using UDP/IPv4 to port 161 of the given host.  Otherwise,
+man/snmpcmd.1.def:.IR "hostname:161"
+man/snmpcmd.1.def:.IR 161 .
+man/snmpcmd.1.def:The ":161" is redundant here since that is the default SNMP port in
+man/snmpcmd.1.def:.IR "TCP:hostname:1161"
+man/snmpcmd.1.def:.I 1161
+man/snmpcmd.1.def:.IR "ipx:0AE43409:00D0B721C6C0/1161"
+man/snmpcmd.1.def:.I 1161
+man/snmpcmd.1.def:.IR "udp6:hostname:10161"
+man/snmpcmd.1.def:.I 10161
+man/snmpcmd.1.def:perform the query using UDP/IPv6 datagrams to port 161 at address
+man/snmpcmd.1.def:.IR "tcpipv6:[::1]:1611"
+man/snmpcmd.1.def:connect to port 1611 on the local host
+man/snmpd.examples.5.def:agentaddress udp:161
+man/snmpd.examples.5.def:agentaddress 161
+man/snmpd.examples.5.def:agentaddress localhost:161     \fI# (udp implicit)\fR
+man/snmpd.examples.5.def:agentaddress udp:161,tcp:161,udp6:161,tcp6:161
+man/snmpd.examples.5.def:proxy -v 1 -c public  localhost:6161  .1.3.6.1.4.1.99
+man/snmptable.1.def:communication with the agent, using UDP/IPv4 to port 161
+man/netsnmp_mib_utilities.3:Definition at line 3161 of file mib.c.
+man/.svn/text-base/snmpnetstat.1.svn-base:with the agent, using UDP/IPv4 to port 161 of the
+man/.svn/text-base/snmptable.1.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmpd.conf.5.def.svn-base:listen on UDP port 161 on all IPv4 interfaces.
+man/.svn/text-base/snmpdelta.1.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmp.conf.5.svn-base:If not specified, the default value for this token is 161.
+man/.svn/text-base/snmpstatus.1.def.svn-base:the agent, using UDP/IPv4 to port 161 of the given target host.
+man/.svn/text-base/snmptest.1.def.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmpcmd.1.def.svn-base:attempted using UDP/IPv4 to port 161 of the given host.  Otherwise,
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR "hostname:161"
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR 161 .
+man/.svn/text-base/snmpcmd.1.def.svn-base:The ":161" is redundant here since that is the default SNMP port in
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR "TCP:hostname:1161"
+man/.svn/text-base/snmpcmd.1.def.svn-base:.I 1161
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR "ipx:0AE43409:00D0B721C6C0/1161"
+man/.svn/text-base/snmpcmd.1.def.svn-base:.I 1161
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR "udp6:hostname:10161"
+man/.svn/text-base/snmpcmd.1.def.svn-base:.I 10161
+man/.svn/text-base/snmpcmd.1.def.svn-base:perform the query using UDP/IPv6 datagrams to port 161 at address
+man/.svn/text-base/snmpcmd.1.def.svn-base:.IR "tcpipv6:[::1]:1611"
+man/.svn/text-base/snmpcmd.1.def.svn-base:connect to port 1611 on the local host
+man/.svn/text-base/snmpd.examples.5.def.svn-base:agentaddress udp:161
+man/.svn/text-base/snmpd.examples.5.def.svn-base:agentaddress 161
+man/.svn/text-base/snmpd.examples.5.def.svn-base:agentaddress localhost:161     \fI# (udp implicit)\fR
+man/.svn/text-base/snmpd.examples.5.def.svn-base:agentaddress udp:161,tcp:161,udp6:161,tcp6:161
+man/.svn/text-base/snmpd.examples.5.def.svn-base:proxy -v 1 -c public  localhost:6161  .1.3.6.1.4.1.99
+man/.svn/text-base/snmpd.8.svn-base:listens for incoming SNMP requests on UDP port 161 on all IPv4 interfaces.
+man/.svn/text-base/snmpd.8.svn-base:.IR "127.0.0.1:161"
+man/.svn/text-base/snmpd.8.svn-base:listen on UDP port 161, but only on the loopback interface.  This
+man/.svn/text-base/snmpd.8.svn-base:being queried remotely.  The  port specification ":161" is
+man/.svn/text-base/snmpd.8.svn-base:.IR "TCP:1161"
+man/.svn/text-base/snmpd.8.svn-base:listen on TCP port 1161 on all IPv4 interfaces.
+man/.svn/text-base/snmpd.8.svn-base:.IR "PVC:161"
+man/.svn/text-base/snmpd.8.svn-base:listen on the AAL5 permanent virtual circuit with VPI=0 and VCI=161
+man/.svn/text-base/snmpd.8.svn-base:.IR "udp6:10161"
+man/.svn/text-base/snmpd.8.svn-base:listen on port 10161 on all IPv6 interfaces.
+man/.svn/text-base/snmp.conf.5.def.svn-base:If not specified, the default value for this token is 161.
+man/.svn/text-base/netsnmp_mib_utilities.3.svn-base:Definition at line 3161 of file mib.c.
+man/.svn/text-base/snmptest.1.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmpd.conf.5.svn-base:listen on UDP port 161 on all IPv4 interfaces.
+man/.svn/text-base/snmpd.8.def.svn-base:listens for incoming SNMP requests on UDP port 161 on all IPv4 interfaces.
+man/.svn/text-base/snmpd.8.def.svn-base:.IR "127.0.0.1:161"
+man/.svn/text-base/snmpd.8.def.svn-base:listen on UDP port 161, but only on the loopback interface.  This
+man/.svn/text-base/snmpd.8.def.svn-base:being queried remotely.  The  port specification ":161" is
+man/.svn/text-base/snmpd.8.def.svn-base:.IR "TCP:1161"
+man/.svn/text-base/snmpd.8.def.svn-base:listen on TCP port 1161 on all IPv4 interfaces.
+man/.svn/text-base/snmpd.8.def.svn-base:.IR "PVC:161"
+man/.svn/text-base/snmpd.8.def.svn-base:listen on the AAL5 permanent virtual circuit with VPI=0 and VCI=161
+man/.svn/text-base/snmpd.8.def.svn-base:.IR "udp6:10161"
+man/.svn/text-base/snmpd.8.def.svn-base:listen on port 10161 on all IPv6 interfaces.
+man/.svn/text-base/snmpdf.1.def.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmptable.1.def.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmpdelta.1.def.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmp_agent_api.3.svn-base:      init_master_agent();  /*  Listen on default port (161).  */
+man/.svn/text-base/snmp_agent_api.3.svn-base:on its default UDP port of 161.
+man/.svn/text-base/snmp_agent_api.3.def.svn-base:      init_master_agent();  /*  Listen on default port (161).  */
+man/.svn/text-base/snmp_agent_api.3.def.svn-base:on its default UDP port of 161.
+man/.svn/text-base/snmpdf.1.svn-base:communication with the agent, using UDP/IPv4 to port 161
+man/.svn/text-base/snmpnetstat.1.def.svn-base:with the agent, using UDP/IPv4 to port 161 of the
+man/.svn/text-base/snmpcmd.1.svn-base:attempted using UDP/IPv4 to port 161 of the given host.  Otherwise,
+man/.svn/text-base/snmpcmd.1.svn-base:.IR "hostname:161"
+man/.svn/text-base/snmpcmd.1.svn-base:.IR 161 .
+man/.svn/text-base/snmpcmd.1.svn-base:The ":161" is redundant here since that is the default SNMP port in
+man/.svn/text-base/snmpcmd.1.svn-base:.IR "TCP:hostname:1161"
+man/.svn/text-base/snmpcmd.1.svn-base:.I 1161
+man/.svn/text-base/snmpcmd.1.svn-base:.IR "ipx:0AE43409:00D0B721C6C0/1161"
+man/.svn/text-base/snmpcmd.1.svn-base:.I 1161
+man/.svn/text-base/snmpcmd.1.svn-base:.IR "udp6:hostname:10161"
+man/.svn/text-base/snmpcmd.1.svn-base:.I 10161
+man/.svn/text-base/snmpcmd.1.svn-base:perform the query using UDP/IPv6 datagrams to port 161 at address
+man/.svn/text-base/snmpcmd.1.svn-base:.IR "tcpipv6:[::1]:1611"
+man/.svn/text-base/snmpcmd.1.svn-base:connect to port 1611 on the local host
+man/.svn/text-base/snmpstatus.1.svn-base:the agent, using UDP/IPv4 to port 161 of the given target host.
+man/.svn/text-base/snmpd.examples.5.svn-base:agentaddress udp:161
+man/.svn/text-base/snmpd.examples.5.svn-base:agentaddress 161
+man/.svn/text-base/snmpd.examples.5.svn-base:agentaddress localhost:161     \fI# (udp implicit)\fR
+man/.svn/text-base/snmpd.examples.5.svn-base:agentaddress udp:161,tcp:161,udp6:161,tcp6:161
+man/.svn/text-base/snmpd.examples.5.svn-base:proxy -v 1 -c public  localhost:6161  .1.3.6.1.4.1.99
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:822a0613b38cec3a1618e591160f033e
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:822a0613b38cec3a1618e591160f033e
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:628161291c12a41e3475f065a2688f70
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/.svn/entries:d8d416d19e631f06f71610596e916c1a
+man/snmpdf.1.def:communication with the agent, using UDP/IPv4 to port 161
+man/snmp_agent_api.3.def:      init_master_agent();  /*  Listen on default port (161).  */
+man/snmp_agent_api.3.def:on its default UDP port of 161.
+man/snmpdf.1:communication with the agent, using UDP/IPv4 to port 161
+man/snmpnetstat.1:with the agent, using UDP/IPv4 to port 161 of the
+man/snmpdelta.1.def:communication with the agent, using UDP/IPv4 to port 161
+man/snmpstatus.1.def:the agent, using UDP/IPv4 to port 161 of the given target host.
+man/snmpd.conf.5:listen on UDP port 161 on all IPv4 interfaces.
+man/snmpd.examples.5:agentaddress udp:161
+man/snmpd.examples.5:agentaddress 161
+man/snmpd.examples.5:agentaddress localhost:161     \fI# (udp implicit)\fR
+man/snmpd.examples.5:agentaddress udp:161,tcp:161,udp6:161,tcp6:161
+man/snmpd.examples.5:proxy -v 1 -c public  localhost:6161  .1.3.6.1.4.1.99
+man/snmpd.8.def:listens for incoming SNMP requests on UDP port 161 on all IPv4 interfaces.
+man/snmpd.8.def:.IR "127.0.0.1:161"
+man/snmpd.8.def:listen on UDP port 161, but only on the loopback interface.  This
+man/snmpd.8.def:being queried remotely.  The  port specification ":161" is
+man/snmpd.8.def:.IR "TCP:1161"
+man/snmpd.8.def:listen on TCP port 1161 on all IPv4 interfaces.
+man/snmpd.8.def:.IR "PVC:161"
+man/snmpd.8.def:listen on the AAL5 permanent virtual circuit with VPI=0 and VCI=161
+man/snmpd.8.def:.IR "udp6:10161"
+man/snmpd.8.def:listen on port 10161 on all IPv6 interfaces.
+man/snmp.conf.5.def:If not specified, the default value for this token is 161.
+man/snmpdelta.1:communication with the agent, using UDP/IPv4 to port 161
+man/snmpd.8:listens for incoming SNMP requests on UDP port 161 on all IPv4 interfaces.
+man/snmpd.8:.IR "127.0.0.1:161"
+man/snmpd.8:listen on UDP port 161, but only on the loopback interface.  This
+man/snmpd.8:being queried remotely.  The  port specification ":161" is
+man/snmpd.8:.IR "TCP:1161"
+man/snmpd.8:listen on TCP port 1161 on all IPv4 interfaces.
+man/snmpd.8:.IR "PVC:161"
+man/snmpd.8:listen on the AAL5 permanent virtual circuit with VPI=0 and VCI=161
+man/snmpd.8:.IR "udp6:10161"
+man/snmpd.8:listen on port 10161 on all IPv6 interfaces.
+man/snmpcmd.1:attempted using UDP/IPv4 to port 161 of the given host.  Otherwise,
+man/snmpcmd.1:.IR "hostname:161"
+man/snmpcmd.1:.IR 161 .
+man/snmpcmd.1:The ":161" is redundant here since that is the default SNMP port in
+man/snmpcmd.1:.IR "TCP:hostname:1161"
+man/snmpcmd.1:.I 1161
+man/snmpcmd.1:.IR "ipx:0AE43409:00D0B721C6C0/1161"
+man/snmpcmd.1:.I 1161
+man/snmpcmd.1:.IR "udp6:hostname:10161"
+man/snmpcmd.1:.I 10161
+man/snmpcmd.1:perform the query using UDP/IPv6 datagrams to port 161 at address
+man/snmpcmd.1:.IR "tcpipv6:[::1]:1611"
+man/snmpcmd.1:connect to port 1611 on the local host
+mibs/rfclist:1611	DNS-SERVER-MIB
+mibs/rfclist:1612	DNS-RESOLVER-MIB
+mibs/.svn/text-base/IANAifType-MIB.txt.svn-base:		   ieee8023adLag (161),  -- IEEE 802.3ad Link Aggregate
+mibs/.svn/text-base/SNMPv2-SMI.txt.svn-base:        IMPLICIT INTEGER (0..18446744073709551615)
+mibs/.svn/text-base/HCNUM-TC.txt.svn-base:        (18446744073709551615 decimal), and the minimum value can
+mibs/.svn/text-base/rfclist.svn-base:1611	DNS-SERVER-MIB
+mibs/.svn/text-base/rfclist.svn-base:1612	DNS-RESOLVER-MIB
+mibs/SNMPv2-SMI.txt:        IMPLICIT INTEGER (0..18446744073709551615)
+mibs/IANAifType-MIB.txt:		   ieee8023adLag (161),  -- IEEE 802.3ad Link Aggregate
+mibs/HCNUM-TC.txt:        (18446744073709551615 decimal), and the minimum value can
+NEWS:      - [BUG 1619827]: link libraries against needed external libraries
+NEWS:      - [PATCH 1616912]: fix memory leak in UDP transport code
+NEWS:      - [BUG 1611524]: fix tcp connection table file descriptor leak
+NEWS:      - [BUG 1619827]: properly link against libperl when configured with
+NEWS:      - [PATCH 1716114]: Let python build in the Net-SNMP source tree
+perl/agent/test.pl:			       'Ports' => '9161');
+perl/agent/.svn/text-base/test.pl.svn-base:			       'Ports' => '9161');
+perl/agent/.svn/text-base/agent.pm.svn-base:    	Ports	- Ports this agent will listen on (EG: "udp:161,tcp:161")
+perl/agent/agent.pm:    	Ports	- Ports this agent will listen on (EG: "udp:161,tcp:161")
+perl/SNMP/SNMP.pm:default '161', allow remote UDP port to be overriden
+perl/SNMP/README:    RemotePort  - default '161', allow remote UDP port to be overridden
+perl/SNMP/.svn/text-base/README.svn-base:    RemotePort  - default '161', allow remote UDP port to be overridden
+perl/SNMP/.svn/text-base/SNMP.pm.svn-base:default '161', allow remote UDP port to be overriden
+perl/SNMP/examples/.svn/text-base/bulkwalk.pl.svn-base:my $port='161';
+perl/SNMP/examples/bulkwalk.pl:my $port='161';
+Binary file perl/SNMP/SNMP.o matches
+perl/SNMP/t/.svn/text-base/mib.txt.svn-base:    		    denf(161),
+perl/SNMP/t/.svn/text-base/mib.txt.svn-base:                  161 DE/NF [5] 2 0 0 0 0 0
+perl/SNMP/t/mib.txt:    		    denf(161),
+perl/SNMP/t/mib.txt:                  161 DE/NF [5] 2 0 0 0 0 0
+perl/default_store/test.pl:print ((netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 9161) == 0) ? "ok 9\n" : "not ok 9\n"); 
+perl/default_store/test.pl:print ((netsnmp_ds_get_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT) == 9161) ? "ok 10\n" : "not ok 10\n"); 
+perl/default_store/.svn/text-base/test.pl.svn-base:print ((netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 9161) == 0) ? "ok 9\n" : "not ok 9\n"); 
+perl/default_store/.svn/text-base/test.pl.svn-base:print ((netsnmp_ds_get_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT) == 9161) ? "ok 10\n" : "not ok 10\n"); 
+perl/default_store/.svn/text-base/default_store.pm.svn-base:  netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 161);
+perl/default_store/default_store.pm:  netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 161);
+Binary file perl/blib/arch/auto/SNMP/SNMP.so matches
+perl/blib/lib/SNMP.pm:default '161', allow remote UDP port to be overriden
+perl/blib/lib/NetSNMP/agent.pm:    	Ports	- Ports this agent will listen on (EG: "udp:161,tcp:161")
+perl/blib/lib/NetSNMP/default_store.pm:  netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 161);
+perl/blib/man3/NetSNMP::agent.3pm:\&        Ports   - Ports this agent will listen on (EG: "udp:161,tcp:161")
+perl/blib/man3/SNMP.3:default '161', allow remote \s-1UDP\s0 port to be overriden
+perl/blib/man3/NetSNMP::default_store.3pm:\&  netsnmp_ds_set_int(NETSNMP_DS_LIBRARY_ID, DS_LIB_DEFAULT_PORT, 161);
+perl/AnyData_SNMP/configs/.svn/text-base/scli.svn-base:    printf "Address:           localhost:161\n";
+perl/AnyData_SNMP/configs/scli:    printf "Address:           localhost:161\n";
+python/netsnmp/.svn/text-base/client.py.svn-base:        'RemotePort':161,
+python/netsnmp/client.py:        'RemotePort':161,
+python/README:    RemotePort  - default '161', allow remote UDP port to be overridden
+python/.svn/text-base/README.svn-base:    RemotePort  - default '161', allow remote UDP port to be overridden
+README.solaris:SNMP uses ports 161 and 162 by default.  Only one application
+README.solaris:  root 16178 1 0 13:16:04 pts/2 0:00 /usr/lib/snmp/snmpdx -y -c /etc/snmp/conf
+README.solaris:Make sure that in snmpdx.reg the port is 161.
+README.win32:     cannot bind to their connect port (161 for agent, 162 for trap receiver).
+README.win32:TCP/IP port of 161.
+README.win32:(161), have the Microsoft agent listen on another port such as 1161, and have
+README.win32:       proxy  -v 1 -c public localhost:1161 .1.3
+README.win32:       proxy  -v 1 -c public localhost:1161 host
+Binary file snmplib/.libs/libnetsnmp.so matches
+Binary file snmplib/.libs/mib.o matches
+Binary file snmplib/.libs/libnetsnmp.a matches
+Binary file snmplib/.libs/parse.o matches
+Binary file snmplib/.libs/snmp_api.o matches
+Binary file snmplib/.libs/libnetsnmp.so.15 matches
+Binary file snmplib/.libs/libnetsnmp.so.15.1.0 matches
+snmplib/.svn/text-base/snmp_api.c.svn-base:    netsnmp_register_default_target("snmp", "udp", ":161");
+snmplib/.svn/text-base/snmp_api.c.svn-base:    netsnmp_register_default_target("snmp", "tcp", ":161");
+snmplib/.svn/text-base/snmp_api.c.svn-base:    netsnmp_register_default_target("snmp", "udp6", ":161");
+snmplib/.svn/text-base/snmp_api.c.svn-base:    netsnmp_register_default_target("snmp", "tcp6", ":161");
+snmplib/.svn/entries:0da8c9e11931619e7fe5865a85ec8804
+Binary file snmplib/snmp_api.o matches
+snmplib/snmp_api.c:    netsnmp_register_default_target("snmp", "udp", ":161");
+snmplib/snmp_api.c:    netsnmp_register_default_target("snmp", "tcp", ":161");
+snmplib/snmp_api.c:    netsnmp_register_default_target("snmp", "udp6", ":161");
+snmplib/snmp_api.c:    netsnmp_register_default_target("snmp", "tcp6", ":161");
+testing/.svn/entries:9977ad04161e2fcd49681147cbba53e7

@@ -1,0 +1,63 @@
+# contents below built automatically by configure; do not edit by hand
+module_list_c= \
+	ingres/imadb/dmfcache/dmfTable.c \
+	ingres/statistics/statistics.c \
+	ingres/imadb/dmfcache/dmfTable_interface.c \
+	ingres/imadb/dmfcache/dmfTable_data_access.c \
+	ingres/imadb/dmfcache/dmfTable_data_get.c \
+	ingres/imadb/dmfcache/dmfTable_data_set.c \
+	mibII/snmp_mib.c \
+	mibII/system_mib.c \
+	mibII/sysORTable.c \
+	mibII/vacm_vars.c \
+	ucd-snmp/proc.c \
+	ucd-snmp/logmatch.c \
+	snmpv3/snmpEngine.c \
+	snmpv3/snmpMPDStats.c \
+	snmpv3/usmStats.c \
+	snmpv3/usmConf.c \
+	snmpv3/usmUser.c \
+	util_funcs.c \
+	mibII/vacm_context.c \
+	mibII/vacm_conf.c \
+	notification/snmpNotifyTable.c \
+	notification/snmpNotifyFilterProfileTable.c \
+	notification-log-mib/notification_log.c \
+	agentx/master.c \
+	agentx/subagent.c \
+	disman/event/mteScalars.c \
+	disman/event/mteTrigger.c \
+	disman/event/mteTriggerTable.c \
+	disman/event/mteTriggerDeltaTable.c \
+	disman/event/mteTriggerExistenceTable.c \
+	disman/event/mteTriggerBooleanTable.c \
+	disman/event/mteTriggerThresholdTable.c \
+	disman/event/mteTriggerConf.c \
+	disman/event/mteEvent.c \
+	disman/event/mteEventTable.c \
+	disman/event/mteEventSetTable.c \
+	disman/event/mteEventNotificationTable.c \
+	disman/event/mteEventConf.c \
+	disman/event/mteObjects.c \
+	disman/event/mteObjectsTable.c \
+	disman/event/mteObjectsConf.c \
+	disman/schedule/schedCore.c \
+	disman/schedule/schedConf.c \
+	disman/schedule/schedTable.c \
+	utilities/override.c \
+	utilities/execute.c \
+	utilities/iquery.c \
+	header_complex.c \
+	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.c \
+	agentx/protocol.c \
+	agentx/client.c \
+	agentx/master_admin.c \
+	agentx/agentx_config.c \
+	target/snmpTargetAddrEntry.c \
+	target/snmpTargetParamsEntry.c \
+	target/target.c \
+	target/target_counters.c \
+	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_interface.c \
+	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_data_access.c
+
+# end configure generated code

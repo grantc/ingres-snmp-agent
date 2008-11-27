@@ -1,0 +1,53 @@
+# contents below built automatically by configure; do not edit by hand
+mibgroup_list_lo= \
+	mibgroup/ingres/imadb/dmfcache/dmfTable.lo \
+	mibgroup/ingres/statistics/statistics.lo \
+	mibgroup/ingres/imadb/dmfcache/dmfTable_interface.lo \
+	mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.lo \
+	mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.lo \
+	mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.lo \
+	mibgroup/mibII/snmp_mib.lo \
+	mibgroup/mibII/system_mib.lo \
+	mibgroup/mibII/sysORTable.lo \
+	mibgroup/mibII/vacm_vars.lo \
+	mibgroup/ucd-snmp/proc.lo \
+	mibgroup/ucd-snmp/logmatch.lo \
+	mibgroup/snmpv3/snmpEngine.lo \
+	mibgroup/snmpv3/snmpMPDStats.lo \
+	mibgroup/snmpv3/usmStats.lo \
+	mibgroup/snmpv3/usmUser.lo \
+	mibgroup/util_funcs.lo \
+	mibgroup/mibII/vacm_context.lo \
+	mibgroup/notification/snmpNotifyTable.lo \
+	mibgroup/notification/snmpNotifyFilterProfileTable.lo \
+	mibgroup/notification-log-mib/notification_log.lo \
+	mibgroup/disman/event/mteScalars.lo \
+	mibgroup/disman/event/mteTrigger.lo \
+	mibgroup/disman/event/mteTriggerTable.lo \
+	mibgroup/disman/event/mteTriggerDeltaTable.lo \
+	mibgroup/disman/event/mteTriggerExistenceTable.lo \
+	mibgroup/disman/event/mteTriggerBooleanTable.lo \
+	mibgroup/disman/event/mteTriggerThresholdTable.lo \
+	mibgroup/disman/event/mteTriggerConf.lo \
+	mibgroup/disman/event/mteEvent.lo \
+	mibgroup/disman/event/mteEventTable.lo \
+	mibgroup/disman/event/mteEventSetTable.lo \
+	mibgroup/disman/event/mteEventNotificationTable.lo \
+	mibgroup/disman/event/mteEventConf.lo \
+	mibgroup/disman/event/mteObjects.lo \
+	mibgroup/disman/event/mteObjectsTable.lo \
+	mibgroup/disman/event/mteObjectsConf.lo \
+	mibgroup/disman/schedule/schedCore.lo \
+	mibgroup/disman/schedule/schedConf.lo \
+	mibgroup/disman/schedule/schedTable.lo \
+	mibgroup/utilities/override.lo \
+	mibgroup/header_complex.lo \
+	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo \
+	mibgroup/target/snmpTargetAddrEntry.lo \
+	mibgroup/target/snmpTargetParamsEntry.lo \
+	mibgroup/target/target.lo \
+	mibgroup/target/target_counters.lo \
+	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_interface.lo \
+	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_data_access.lo
+
+# end configure generated code

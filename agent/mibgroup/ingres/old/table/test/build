@@ -1,0 +1,2 @@
+/usr/bin/cc -o cursor cursor.c /opt/Ingres/IngresII/ingres/lib/libingres.a -lpthread -lm -lc -lcrypt -ldl /lib/libgcc_s.so.1
+

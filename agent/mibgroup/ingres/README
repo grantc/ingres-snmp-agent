@@ -1,0 +1,6 @@
+imadb and statistics are the directories which need to be compiled in
+edit /usr/local/src/net-snmp-5.4.1/go to configure
+INGRES-MIB.txt in /usr/local/share/snmp/mibs
+remember to . .ingIIbash before running the agent - otherwise get a segmentation fault (to fix)
+use mib2c-update (with .mib2c-updaterc file in each ingres mib subdirectory)
+

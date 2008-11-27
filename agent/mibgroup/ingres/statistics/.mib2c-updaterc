@@ -1,0 +1,2 @@
+UPDATE_OID=statistics
+UPDATE_CONF=mib2c.ingres.scalar.conf

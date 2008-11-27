@@ -1,0 +1,6 @@
+/opt/Ingres/IngresII/ingres/lib/libingres.a(gcapwd.o): In function `GCusrpwd':
+gcapwd.c:(.text+0xe1): undefined reference to `crypt'
+collect2: ld returned 1 exit status
+make[1]: *** [snmpd] Error 1
+make[1]: Leaving directory `/usr/local/src/net-snmp-5.4.1/agent'
+

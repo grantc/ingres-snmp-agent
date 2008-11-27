@@ -1,0 +1,34 @@
+  struct dmfrec_ {
+    char server[65];
+    long pagesize;
+    long forceCount;
+    long ioWaitCount;
+    long groupBufferReadCount;
+    long groupBufferWriteCount;
+    long fixCount;
+    long unfixCount;
+    long readCount;
+    long writeCount;
+    long hitCount;
+    long dirtyUnfixCount;
+    long pagesStillValid;
+    long pagesInvalid;
+    long bufferCount;
+    long pageBufferCount;
+    long fLimit;
+    long mLimit;
+    long wbStart;
+    long wbEnd;
+    long hashBucketCount;
+    long groupBufferCount;
+    long groupBufferSize;
+    long cacheStatus;
+    long freeBufferCount;
+    long freeBufferWaiters;
+    long fixedBufferCount;
+    long modifiedBufferCount;
+    long freeGroupBufferCount;
+    long fixedGroupBufferCount;
+    long modifiedGroupBufferCount;
+  } dmfrec;
+

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- SiteMinder Encoding=ISO-8859-1; -->
+<!-- $Revision: 1.10 $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Cisco.com Login Page</title>
+
+    <meta http-equiv="Content-type" content="text/html;charset=iso-8859-1"/>
+    <meta name="accessLevel" content="Guest"/>
+    <meta name="country" content="US"/>
+    <meta name="locale" content="US"/>
+    <meta name="language" content="en"/>
+    <meta name="title" content="Login Page"/>
+
+
+<script type="text/javascript" src="https://www.cisco.com/swa/j/global.js"></script>
+
+<script  type="text/javascript">
+// This function modifies the hidden TARGET field used for
+// Siteminder forms based login
+// The referer query parameter is added to faciliate the correct
+// processing of the CDC login.pl script where an incorrect
+// or no HTTP_REFERER header is passed
+
+function addRefererParam() {
+
+  // Obtain handle to Login form
+  var form = document.forms['Login'];
+
+  // Obtain current value of target
+  var current_target = form.target.value;
+
+  // Only continue with this function if the target is login.pl
+  if ((current_target.indexOf('cgi-bin/login') == -1) || (current_target.indexOf('cgi-bin/login?referer') != -1)){
+  //Setting cookies to the Target value for PSync
+  createCookie('SECQURL',current_target)
+    return true;
+  }
+
+  // Define query parameter names and values
+  var default_location = 'http://www.cisco.com'; // Default landing page if all else fails
+  var name_referer = 'referer'; // Parameter that is used to pass the referer to login.pl
+  var val_referer = document.referrer; // Value for referer parameter
+  if (val_referer == '') {
+    val_referer = default_location;
+  }
+  if (val_referer.split('//')[1].split('/')[1] == undefined) {
+	val_referer = val_referer + '/';
+  }
+  // Replace current target value with new target
+  // Current target value + query parameters to support referer processing
+  form.target.value = current_target + '?' + name_referer + '=' + val_referer;
+
+
+  // Obtain current value of target with referrer for PSync
+  var current_target_referer = form.target.value;
+ //Setting cookies to the Target value for PSync
+  createCookie('SECQURL',current_target_referer);
+  return true;
+}
+
+function createCookie(name,value) {
+        document.cookie = name+"="+value+"; path=/"+"; domain=cisco.com";
+}
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://www.cisco.com/swa/c/framework.css" />
+
+<style type="text/css">
+
+
+/* -----------------------------------
+spacing in and around content wrapper */
+#framework-content-main {
+	padding-left:0px;
+	margin-left:-2px;
+}
+#framework-column-titles #framework-content-titles  h2 {
+	border-left:1px solid #ccc;
+	padding:14px 0pt 9px 10px;
+	margin-top:4px;
+}
+.content{
+	margin-top:1px;
+	margin-bottom:7px;
+}
+* html .content {margin-top:6px;}
+.content td {vertical-align:top;}
+.content .gutter {width:10px;}
+
+
+/* fonts */
+.content * {
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	color:#666;
+	font-size:97%;
+}
+.content .open {font-size:104%;}
+.content ul {
+	font-size:100%;
+}
+.content a, .content .open .inner p {font-weight:normal;font-size:11px;}
+.content .closed p {line-height:150%;font-weight:normal;}
+#error-message {color:#b21a1a;font-weight:normal;padding-bottom:2px;}
+#userInput,#passwordInput{font-weight:normal;}
+
+
+/* closed boxes */
+.content .closed {
+	border:solid 1px #999;
+	width:339px;
+	padding:0px;
+}
+.content .inner {
+	padding:5px 15px 10px 15px;
+}
+#right .inner {padding-top:4px;}
+.content .closed h3 {
+	background-color:#999;
+	color:#fff;
+	padding: 2px 15px 3px 15px;
+	margin:0px 0px 10px 0px;
+}
+.content .closed p {
+	padding:0px;
+	margin: 0px;
+}
+.content form {
+	display:inline;
+}
+.content label {
+	display: block;
+	padding-bottom:3px;
+}
+* html label {padding-bottom:0px;margin-bottom:-1px;}
+#password{
+	padding-top:4px;
+	margin-bottom:-7px;
+}
+* html #password{padding-top:3px;margin-bottom:-5px;}
+#forgot-link{padding:37px 0px 5px 0px;}
+#login-button {
+	position:relative;
+	top:6px;
+	left:8px;
+}
+* html #login-button {left:-14px;top:4px;}
+.content ul {
+	margin:1px 0px 0px 0px;
+	padding:0px;
+	list-style-type:none;
+}
+.content li {
+	padding-top:4px;
+}
+* html .content li {padding-top:3px;}
+.register-button {
+	padding:17px 0px 5px 0px;
+	text-align:right;
+}
+
+
+
+/* open boxes */
+.content .open {
+	padding:0px;
+	width:341px;
+}
+.content .open .el {
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+	margin-top:6px;
+}
+.content .open h3 {
+	border-bottom: solid 1px #999;
+	color:#666;
+	padding:9px 15px 9px 0px;
+	margin:0px 0px 0px 15px;
+}
+.content .open .inner p {
+	padding: 0px;
+	margin: 0px;
+	padding-top:10px;
+}
+.content .open .inner {
+	padding:3px 15px 16px 15px;
+	margin:0px;
+}
+#faq-link {
+	padding-top:10px;
+}
+
+</style>
+
+
+</head>
+<body id="libra" onload="addRefererParam();"><!--googleoff: snippet-->
+    <div id="framework-base-banner">
+        <div class="skiplinks">
+            <a href="http://cisco.com" accesskey="1">Home</a> |
+            <a href="#content" accesskey="2">Skip to Content</a> |
+            <a href="#search">Skip to Search</a> |
+            <a href="#hinav" accesskey="4">Skip to Navigation</a> |
+            <a href="#pagefooter" accesskey="5">Skip to Footer</a> |
+        </div>
+
+        <div id="framework-logo"><a href="http://www.cisco.com/en/US/hmpgs/index.html" ><img border="0" alt="Cisco Systems, Inc." height="73" width="110" src="https://www.cisco.com/swa/i/logo.gif" /></a></div>
+        <div id="framework-header">
+            <div class="nav-secondary">
+
+
+                <span class="region-selector"><span class="region">Worldwide</span> [<a href="http://www.cisco.com/en/US/swassets/sw274/sitewide_country_language_selector.html" onclick="global_openCdcPopup('http://www.cisco.com/en/US/swassets/sw274/sitewide_country_language_selector.html',643,468);return false;" title="Popup: Region/Language Selector">change</a>]
+  <!-- ***Language Selector***
+                <span class="language-selector"><span class="language">Lang</span> /
+                <a href="">Alt Lang</a></span>
+-->
+                </span>
+
+                <a href="http://www.cisco.com/cgi-bin/login" class="login">Log In</a>
+                <span class="link-delimiter">|</span><a href="http://tools.cisco.com/RPF/register/register.do">Register</a>
+                <span class="link-delimiter">|</span>
+
+
+
+                <a href="http://www.cisco.com/web/about/index.html">About Cisco</a>
+            </div>
+            <span class="search-entitlement">Guest</span>
+
+
+            <div class="search">
+                <a name="search"></a>
+                <form method="get" action="http://www.cisco.com/pcgi-bin/search/search.pl" name="sitewidesearch">
+                <input onfocus="checkClear(this,'Search ')" value="Search " id="searchPhrase" name="searchPhrase" type="text" tabindex="1" /><input src="https://www.cisco.com/swa/i/btn_go.gif" id="go" alt="Go" type="image"  tabindex="2" /><br />
+                <label for="searchPhrase" accesskey="3">Search </label>
+                <input name="nv" value="Search All cisco.com##cisco.com" type="hidden" />
+                <input name="language" value="en" type="hidden" />
+                <input name="country" value="US" type="hidden" />
+                <input name="accessLevel" value="Guest" type="hidden" />
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+    <table id="framework-wrapper" cellspacing="0" cellpadding="0" border="0" summary="">
+        <tr>
+            <td>
+            <div class="cdc-rc-container" id="cdc-nav-module">
+
+                <span class="corner-top"><span class="corner-left"></span></span>
+                <table border="0" cellpadding="0" cellspacing="0" width="90%" class="nav-container">
+                    <tbody>
+                    <tr>
+                        <td class="nav"><a href="http://www.cisco.com/en/US/netsol/index.html">Solutions</a></td>
+                        <td class="nav"><a href="http://www.cisco.com/en/US/products/index.html">Products &amp; Services</a></td>
+                        <td class="nav"><a href="http://www.cisco.com/en/US/ordering/index.shtml">Ordering</a></td>
+
+                        <td class="nav"><a href="http://www.cisco.com/en/US/support/index.html">Support</a></td>
+                        <td class="nav"><a href="http://www.cisco.com/web/learning/index.html">Training &amp; Events</a></td>
+                        <td class="nav"><a href="http://www.cisco.com/web/partners/index.html">Partner Central</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <table id="framework-base-main" cellspacing="0" cellpadding="0" border="0" summary="">
+                <tr>
+                    <td id="framework-column-left" valign="top"><a name="hinav"></a>
+                    </td>
+                    <td id="framework-column-center">
+                        <table cellspacing="0" id="framework-base-content">
+                            <tr>
+                                <td id="framework-column-titles" colspan="2">
+                                    <div id="framework-content-titles"><!--googleon: snippet-->
+
+
+                                        <h2 class="title-page">Log In</h2>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td id="framework-column-main"><a name="content"></a>
+                                <div id="framework-content-main">
+                                     <!-- CDC-DM: Main Col Start -->
+
+                                    <!--googleoff: snippet-->
+                                    <table align="right" border="0" cellspacing="0" cellpadding="0" summary="" id="content-right-top">
+                                        <tr><td valign="top" align="right"><!-- Table A --></td></tr>
+                                        <tr><td valign="top" align="right"><!-- Table B --></td></tr>
+
+                                        <tr><td valign="top" align="right"><!-- Table C --></td></tr>
+                                        <tr><td valign="top" align="right"><!-- Table D --></td></tr>
+                                    </table>
+                                    <!--googleon: snippet-->
+
+
+
+
+
+
+
+
+									<table class="content" >
+										<tr>
+                                    		<td class="closed" id="left">
+												<h3>Existing User</h3>
+												<div class="inner">
+													<form method="post" name="Login" id="Login">
+
+														<label for="userInput" >User Name:</label>
+														<input type="text" name="USER" id="userInput" size="33" maxlength="50"/>
+
+														<label for="passwordInput" id="password" >Password:</label>
+														<input type="password" name="PASSWORD" id="passwordInput" size="33" maxlength="50"/>
+
+														<input type="hidden" name="target" value="HTTP://www.cisco.com/cgi-bin/Software/Tablebuild/doftp.pl?ftpfile=/cisco/crypto/3DES/vpn/client/linux/vpnclient-linux-x86_64-4.8.01.0640-k9.tar.gz"/>
+														<input type="hidden" name="smauthreason" value="0"/>
+														<input type="hidden" name="smquerydata" value="">
+														<input type="hidden" name="smagentname" value="zjGKGqr62shoVBG6cNUdYNajdKPzmOFLa/ZkeebT0+NV+EcoXFhv/vB8k65Cw/+x">
+														<input type="hidden" name="postpreservationdata" value="">
+														<input type="hidden" name="SMENC" value="ISO-8859-1">
+														<input type="hidden" name="SMLOCALE" value="US-EN">
+														<input type="image" id="login-button" src="https://www.cisco.com/swa/i/log_in_btn.gif" name="login-button" alt="Login Button"/>
+													</form>
+													<script type="text/javascript">document.getElementById('userInput').focus();</script>
+													<br/>
+													<div id="forgot-link"><a href="http://www.cisco.com/msgs/sorry-pw.html">Forgot your password?</a></div>
+												</div>
+											</td><td class="gutter"></td>
+											<td class="closed" id="right">
+													<h3>New User</h3>
+													<div class="inner">
+														<p>
+														There are various levels of access depending on your relationship with Cisco. Review the user benefits and find the level that is most appropriate for you.</p>
+
+														<ul>
+															<li><a href="http://www.cisco.com/en/US/applicat/cdcrgstr/applications_overview.html">Registered Guest</a></li>
+															<li><a href="http://www.cisco.com/en/US/applicat/cdcrgstr/applications_overview.html#partner">Partner &amp; Reseller</a></li>
+															<li><a href="http://www.cisco.com/en/US/applicat/cdcrgstr/applications_overview.html#dircust">Registered Customer</a></li>
+														</ul>
+														<div class="register-button"><a href="http://tools.cisco.com/RPF/register/register.do"><img src="https://www.cisco.com/swa/i/register_now_btn.gif" alt="Register Button"/></div>
+													</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="open">
+												<div class="el">
+													<h3>Simplified Log In</h3>
+													<div class="inner">
+														<p>This new log-in page has been created in response to your requests for a simplified, secure login to Cisco.com. </p>
+
+														<p>Now, with a single login page that is secured with an https connection, you can log-in simply, easily and less frequently per session.</p>
+
+														<div id="faq-link"><a href="http://www.cisco.com/web/siteassets/login_faq.html">Learn more about the new log-in page.</a></div>
+													</div>
+												</div>
+											</td>
+											<td></td><td></td>
+										</tr>
+									</table>
+                                    <!--googleoff: snippet-->
+                                    <!-- CDC-DM: Main Col End -->
+                                </div>
+                            </td>
+                            <td id="framework-column-right">
+                                <div id="framework-content-right">
+                                </div>
+                            </td>
+                            </tr>
+                    </table>
+                    </td>
+                </tr>
+            </table>
+            </td>
+
+        </tr>
+    </table><a name="pagefooter"></a>
+    <div id="framework-footer">
+        <div id="footer-nav"><a href="http://www.cisco.com/ciscodotcom/toolkit/contacts_feedback.html" onclick="global_openCdcPopup('http://www.cisco.com/ciscodotcom/toolkit/contacts_feedback.html',643,468);return false;" title="Popup: Contacts &amp; Feedback" accesskey="9">Contacts &amp; Feedback</a> | <a href="http://www.cisco.com/ciscodotcom/toolkit/help.html" onclick="global_openCdcPopup('http://www.cisco.com/ciscodotcom/toolkit/help.html',643,468);return false;" title="Popup: Help" accesskey="0">Help</a> | <a href="http://www.cisco.com/web/siteassets/sitemap/index.html">Site Map</a></div>
+
+        <div id="footer-copyright">&copy; 1992-2007 Cisco Systems Inc. All rights reserved.</div><div id="footer-legal"><a href="http://www.cisco.com/en/US/swassets/sw293/sitewide_important_notices.html" onclick="global_openCdcPopup('http://www.cisco.com/en/US/swassets/sw293/sitewide_important_notices.html',643,468);return false;" title="Popup: Terms &amp; Conditions">Terms &amp; Conditions</a> | <a href="http://www.cisco.com/en/US/swassets/sw293/privacy_statement.html" onclick="global_openCdcPopup('http://www.cisco.com/en/US/swassets/sw293/privacy_statement.html',643,468);return false;" title="Popup: Privacy Statement">Privacy Statement</a> | <a href="http://www.cisco.com/en/US/swassets/sw293/privacy_statement.html#cookies" onclick="global_openCdcPopup('http://www.cisco.com/en/US/swassets/sw293/privacy_statement.html#cookies',643,468);return false;" title="Popup: Cookie Policy">Cookie Policy</a> | <a href="http://www.cisco.com/en/US/swassets/sw293/trademark_statement.html" onclick="global_openCdcPopup('http://www.cisco.com/en/US/swassets/sw293/trademark_statement.html',643,468);return false;" title="Popup: Trademarks of Cisco Systems Inc.">Trademarks of Cisco Systems Inc.</a></div>
+    </div>
+
+    <!--googleon: snippet-->
+</body>
+</html>

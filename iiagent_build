@@ -1,0 +1,1 @@
+./configure --enable-mini-agent --disable-embedded-perl --with-mib-modules="ingres/imadb/dmfcache/dmfTable,ingres/statistics/statistics" --with-defaults --with-default-snmp-version=2 --disable-manuals --with-libs='/opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm' --disable-applications --disable-scripts --without-root-access --without-kmem-usage

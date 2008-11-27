@@ -1,0 +1,34 @@
+  struct dmfrec_ {
+    char server[65];
+    long page_size;
+    long force_count;
+    long io_wait_count;
+    long group_buffer_read_count;
+    long group_buffer_write_count;
+    long fix_count;
+    long unfix_count;
+    long read_count;
+    long write_count;
+    long hit_count;
+    long dirty_unfix_count;
+    long pages_still_valid;
+    long pages_invalid;
+    long buffer_count;
+    long page_buffer_count;
+    long flimit;
+    long mlimit;
+    long wbstart;
+    long wbend;
+    long hash_bucket_count;
+    long group_buffer_count;
+    long group_buffer_size;
+    long cache_status;
+    long free_buffer_count;
+    long free_buffer_waiters;
+    long fixed_buffer_count;
+    long modified_buffer_count;
+    long free_group_buffer_count;
+    long fixed_group_buffer_count;
+    long modified_group_buffer_count;
+  } dmfrec;
+

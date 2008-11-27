@@ -1,0 +1,11 @@
+  SNMP Versions Supported:    1 2c 3
+  Net-SNMP Version:           5.4.1
+  Building for:               linux
+  Network transport support:  Callback Unix TCP UDP
+  SNMPv3 Security Modules:     usm
+  Agent MIB code:             ingres/imadb/dmfcache/dmfTable ingres/statistics/statistics default_modules =>  ingres/imadb/dmfcache/dmfTable_interface ingres/imadb/dmfcache/dmfTable_data_access ingres/imadb/dmfcache/dmfTable_data_get ingres/imadb/dmfcache/dmfTable_data_set snmpv3mibs mibII/snmp_mib mibII/system_mib mibII/sysORTable mibII/vacm_vars ucd-snmp/proc ucd-snmp/logmatch notification notification-log-mib agentx disman/event disman/schedule utilities
+  Embedded Perl support:      disabled
+  SNMP Perl modules:          building -- not embeddable
+  SNMP Python modules:        disabled
+  Authentication support:     MD5 SHA1
+  Encryption support:         DES AES

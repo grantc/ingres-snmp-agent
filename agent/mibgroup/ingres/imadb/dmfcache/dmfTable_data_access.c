@@ -230,30 +230,41 @@ dmfTable_container_load(netsnmp_container * container)
   }
 /* # line 254 "dmfTable_data_access.sc" */	/* host code */
         DEBUGMSGTL(("verbose:dmfTable","Connected to database\n"));
+/* # line 256 "dmfTable_data_access.sc" */	/* execute procedure */
+  {
+    IIsqInit(&sqlca);
+    IILQpriProcInit(2,(char *)"ima_set_vnode_domain");
+    while (IILQprsProcStatus(0) != 0) {
+      if (sqlca.sqlcode < 0) 
+        IIsqStop(&sqlca);
+    } /* IILQprsProcStatus */
+  }
+/* # line 257 "dmfTable_data_access.sc" */	/* host code */
+        DEBUGMSGTL(("verbose:dmfTable","Vnode domain set\n"));
     /*
      * TODO:351:M: |-> Load/update data in the dmfTable container.
      * loop over your dmfTable data, allocate a rowreq context,
      * set the index(es) [and data, optionally] and insert into
      * the container.
      */
-/* # line 263 "dmfTable_data_access.sc" */	/* open */
+/* # line 266 "dmfTable_data_access.sc" */	/* open */
   {
     IIsqInit(&sqlca);
-    IIcsOpen((char *)"dmfcsr",48,25779);
+    IIcsOpen((char *)"dmfcsr",31844,21499);
     IIwritio(0,(short *)0,1,32,0,(char *)
 "select * from ima_dmf_cache_stats");
     IIwritio(0,(short *)0,1,32,0,(char *)" for readonly ");
-    IIcsQuery((char *)"dmfcsr",48,25779);
+    IIcsQuery((char *)"dmfcsr",31844,21499);
     if (sqlca.sqlcode < 0) 
       IIsqStop(&sqlca);
   }
-/* # line 264 "dmfTable_data_access.sc" */	/* host code */
+/* # line 267 "dmfTable_data_access.sc" */	/* host code */
         DEBUGMSGTL(("verbose:dmfTable","Cursor opened\n"));
     while (1) {
-/* # line 271 "dmfTable_data_access.sc" */	/* fetch */
+/* # line 274 "dmfTable_data_access.sc" */	/* fetch */
   {
     IIsqInit(&sqlca);
-    if (IIcsRetScroll((char *)"dmfcsr",48,25779,0,0) != 0) {
+    if (IIcsRetScroll((char *)"dmfcsr",31844,21499,0,0) != 0) {
       IIcsGetio((short *)0,1,32,64,(dmfrec).server);
       IIcsGetio((short *)0,1,30,sizeof((dmfrec).pagesize),&(dmfrec).pagesize);
       IIcsGetio((short *)0,1,30,sizeof((dmfrec).forceCount),&
@@ -314,7 +325,7 @@ dmfTable_container_load(netsnmp_container * container)
     else if (sqlca.sqlcode < 0) 
       IIsqStop(&sqlca);
   }
-/* # line 272 "dmfTable_data_access.sc" */	/* host code */
+/* # line 275 "dmfTable_data_access.sc" */	/* host code */
 		DEBUGMSGTL(("verbose:dmfTable","SQL fetched\n"));
         	DEBUGMSGTL(("verbose:dmfTable","Server %s\n",dmfrec.server));
         	DEBUGMSGTL(("verbose:dmfTable","Page Size %d\n",dmfrec.pagesize));
@@ -535,14 +546,14 @@ dmfTable_container_load(netsnmp_container * container)
         ++count;
     }
         close_dmfcsr:
-/* # line 530 "dmfTable_data_access.sc" */	/* close */
+/* # line 533 "dmfTable_data_access.sc" */	/* close */
   {
     IIsqInit(&sqlca);
-    IIcsClose((char *)"dmfcsr",48,25779);
+    IIcsClose((char *)"dmfcsr",31844,21499);
     if (sqlca.sqlcode < 0) 
       IIsqStop(&sqlca);
   }
-/* # line 533 "dmfTable_data_access.sc" */	/* host code */
+/* # line 536 "dmfTable_data_access.sc" */	/* host code */
     DEBUGMSGT(("verbose:dmfTable:dmfTable_container_load",
                "inserted %d records\n", count));
     return MFD_SUCCESS;

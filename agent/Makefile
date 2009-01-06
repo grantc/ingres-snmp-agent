@@ -201,7 +201,7 @@ LAGENTLIBS	=
 LMIBLIBS	=  -ldl
 PERLLDOPTS_FOR_APPS = 
 PERLLDOPTS_FOR_LIBS = 
-LIBS		= $(USELIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm $(PERLLDOPTS_FOR_APPS)
+LIBS		= $(USELIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread $(PERLLDOPTS_FOR_APPS)
 OUR_AGENT_LIBS	= $(AGENTLIB) $(HELPERLIB) $(MIBLIB) $(LIBS) 
 CPPFLAGS	= $(TOP_INCLUDES) -I. $(AGENT_INCLUDES) $(MIBGROUP_INCLUDES) \
 		  $(SNMPLIB_INCLUDES)  
@@ -217,22 +217,35 @@ CPPFLAGS	= $(TOP_INCLUDES) -I. $(AGENT_INCLUDES) $(MIBGROUP_INCLUDES) \
 mibgroup_list_lo= \
 	mibgroup/ingres/imadb/dmfcache/dmfTable.lo \
 	mibgroup/ingres/statistics/statistics.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_interface.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_interface.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.lo \
 	mibgroup/mibII/snmp_mib.lo \
 	mibgroup/mibII/system_mib.lo \
 	mibgroup/mibII/sysORTable.lo \
 	mibgroup/mibII/vacm_vars.lo \
-	mibgroup/ucd-snmp/proc.lo \
-	mibgroup/ucd-snmp/logmatch.lo \
-	mibgroup/snmpv3/snmpEngine.lo \
-	mibgroup/snmpv3/snmpMPDStats.lo \
-	mibgroup/snmpv3/usmStats.lo \
-	mibgroup/snmpv3/usmUser.lo \
 	mibgroup/util_funcs.lo \
 	mibgroup/mibII/vacm_context.lo \
+	mibgroup/ucd-snmp/proc.lo \
+	mibgroup/ucd-snmp/versioninfo.lo \
+	mibgroup/ucd-snmp/pass.lo \
+	mibgroup/ucd-snmp/pass_persist.lo \
+	mibgroup/ucd-snmp/disk.lo \
+	mibgroup/ucd-snmp/loadave.lo \
+	mibgroup/agent/extend.lo \
+	mibgroup/ucd-snmp/errormib.lo \
+	mibgroup/ucd-snmp/file.lo \
+	mibgroup/ucd-snmp/dlmod.lo \
+	mibgroup/ucd-snmp/proxy.lo \
+	mibgroup/ucd-snmp/logmatch.lo \
+	mibgroup/ucd-snmp/memory.lo \
+	mibgroup/ucd-snmp/vmstat.lo \
 	mibgroup/notification/snmpNotifyTable.lo \
 	mibgroup/notification/snmpNotifyFilterProfileTable.lo \
 	mibgroup/notification-log-mib/notification_log.lo \
@@ -258,6 +271,10 @@ mibgroup_list_lo= \
 	mibgroup/utilities/override.lo \
 	mibgroup/header_complex.lo \
 	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo \
+	mibgroup/hardware/memory/hw_mem.lo \
+	mibgroup/hardware/memory/memory_linux.lo \
+	mibgroup/hardware/cpu/cpu.lo \
+	mibgroup/hardware/cpu/cpu_linux.lo \
 	mibgroup/target/snmpTargetAddrEntry.lo \
 	mibgroup/target/snmpTargetParamsEntry.lo \
 	mibgroup/target/target.lo \
@@ -271,22 +288,35 @@ mibgroup_list_lo= \
 mibgroup_list_o= \
 	mibgroup/ingres/imadb/dmfcache/dmfTable.o \
 	mibgroup/ingres/statistics/statistics.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_interface.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_interface.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.o \
 	mibgroup/mibII/snmp_mib.o \
 	mibgroup/mibII/system_mib.o \
 	mibgroup/mibII/sysORTable.o \
 	mibgroup/mibII/vacm_vars.o \
-	mibgroup/ucd-snmp/proc.o \
-	mibgroup/ucd-snmp/logmatch.o \
-	mibgroup/snmpv3/snmpEngine.o \
-	mibgroup/snmpv3/snmpMPDStats.o \
-	mibgroup/snmpv3/usmStats.o \
-	mibgroup/snmpv3/usmUser.o \
 	mibgroup/util_funcs.o \
 	mibgroup/mibII/vacm_context.o \
+	mibgroup/ucd-snmp/proc.o \
+	mibgroup/ucd-snmp/versioninfo.o \
+	mibgroup/ucd-snmp/pass.o \
+	mibgroup/ucd-snmp/pass_persist.o \
+	mibgroup/ucd-snmp/disk.o \
+	mibgroup/ucd-snmp/loadave.o \
+	mibgroup/agent/extend.o \
+	mibgroup/ucd-snmp/errormib.o \
+	mibgroup/ucd-snmp/file.o \
+	mibgroup/ucd-snmp/dlmod.o \
+	mibgroup/ucd-snmp/proxy.o \
+	mibgroup/ucd-snmp/logmatch.o \
+	mibgroup/ucd-snmp/memory.o \
+	mibgroup/ucd-snmp/vmstat.o \
 	mibgroup/notification/snmpNotifyTable.o \
 	mibgroup/notification/snmpNotifyFilterProfileTable.o \
 	mibgroup/notification-log-mib/notification_log.o \
@@ -312,6 +342,10 @@ mibgroup_list_o= \
 	mibgroup/utilities/override.o \
 	mibgroup/header_complex.o \
 	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.o \
+	mibgroup/hardware/memory/hw_mem.o \
+	mibgroup/hardware/memory/memory_linux.o \
+	mibgroup/hardware/cpu/cpu.o \
+	mibgroup/hardware/cpu/cpu_linux.o \
 	mibgroup/target/snmpTargetAddrEntry.o \
 	mibgroup/target/snmpTargetParamsEntry.o \
 	mibgroup/target/target.o \
@@ -323,7 +357,6 @@ mibgroup_list_o= \
 
 # contents below built automatically by configure; do not edit by hand
 agentgroup_list_lo= \
-	mibgroup/snmpv3/usmConf.lo \
 	mibgroup/mibII/vacm_conf.lo \
 	mibgroup/agentx/master.lo \
 	mibgroup/agentx/subagent.lo \
@@ -338,7 +371,6 @@ agentgroup_list_lo= \
 
 # contents below built automatically by configure; do not edit by hand
 agentgroup_list_o= \
-	mibgroup/snmpv3/usmConf.o \
 	mibgroup/mibII/vacm_conf.o \
 	mibgroup/agentx/master.o \
 	mibgroup/agentx/subagent.o \
@@ -431,32 +463,44 @@ installmibgroupheaders:
 # contents below built automatically by configure; do not edit by hand
 read_config.lo: mibgroup/ingres/imadb/dmfcache/dmfTable.h
 read_config.lo: mibgroup/ingres/statistics/statistics.h
+read_config.lo: mibgroup/ingres/imadb/meminfo/memInfoTable.h
 read_config.lo: mibgroup/default_modules.h
 read_config.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_interface.h
 read_config.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.h
 read_config.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.h
 read_config.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.h
-read_config.lo: mibgroup/snmpv3mibs.h
+read_config.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_interface.h
+read_config.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.h
+read_config.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.h
+read_config.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.h
 read_config.lo: mibgroup/mibII/snmp_mib.h
 read_config.lo: mibgroup/mibII/system_mib.h
 read_config.lo: mibgroup/mibII/sysORTable.h
 read_config.lo: mibgroup/mibII/vacm_vars.h
-read_config.lo: mibgroup/ucd-snmp/proc.h
-read_config.lo: mibgroup/ucd-snmp/logmatch.h
+read_config.lo: mibgroup/ucd_snmp.h
 read_config.lo: mibgroup/notification.h
 read_config.lo: mibgroup/notification-log-mib.h
 read_config.lo: mibgroup/agentx.h
 read_config.lo: mibgroup/disman/event.h
 read_config.lo: mibgroup/disman/schedule.h
 read_config.lo: mibgroup/utilities.h
-read_config.lo: mibgroup/snmpv3/snmpEngine.h
-read_config.lo: mibgroup/snmpv3/snmpMPDStats.h
-read_config.lo: mibgroup/snmpv3/usmStats.h
-read_config.lo: mibgroup/snmpv3/usmConf.h
-read_config.lo: mibgroup/snmpv3/usmUser.h
 read_config.lo: mibgroup/util_funcs.h
 read_config.lo: mibgroup/mibII/vacm_context.h
 read_config.lo: mibgroup/mibII/vacm_conf.h
+read_config.lo: mibgroup/ucd-snmp/proc.h
+read_config.lo: mibgroup/ucd-snmp/versioninfo.h
+read_config.lo: mibgroup/ucd-snmp/pass.h
+read_config.lo: mibgroup/ucd-snmp/pass_persist.h
+read_config.lo: mibgroup/ucd-snmp/disk.h
+read_config.lo: mibgroup/ucd-snmp/loadave.h
+read_config.lo: mibgroup/agent/extend.h
+read_config.lo: mibgroup/ucd-snmp/errormib.h
+read_config.lo: mibgroup/ucd-snmp/file.h
+read_config.lo: mibgroup/ucd-snmp/dlmod.h
+read_config.lo: mibgroup/ucd-snmp/proxy.h
+read_config.lo: mibgroup/ucd-snmp/logmatch.h
+read_config.lo: mibgroup/ucd-snmp/memory.h
+read_config.lo: mibgroup/ucd-snmp/vmstat.h
 read_config.lo: mibgroup/notification/snmpNotifyTable.h
 read_config.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable.h
 read_config.lo: mibgroup/notification/snmpNotifyFilterProfileTable.h
@@ -485,6 +529,8 @@ read_config.lo: mibgroup/disman/schedule/schedTable.h
 read_config.lo: mibgroup/utilities/override.h
 read_config.lo: mibgroup/utilities/execute.h
 read_config.lo: mibgroup/utilities/iquery.h
+read_config.lo: mibgroup/hardware/memory.h
+read_config.lo: mibgroup/hardware/cpu.h
 read_config.lo: mibgroup/header_complex.h
 read_config.lo: mibgroup/target.h
 read_config.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.h
@@ -492,6 +538,10 @@ read_config.lo: mibgroup/agentx/protocol.h
 read_config.lo: mibgroup/agentx/client.h
 read_config.lo: mibgroup/agentx/master_admin.h
 read_config.lo: mibgroup/agentx/agentx_config.h
+read_config.lo: mibgroup/hardware/memory/hw_mem.h
+read_config.lo: mibgroup/hardware/memory/memory_linux.h
+read_config.lo: mibgroup/hardware/cpu/cpu.h
+read_config.lo: mibgroup/hardware/cpu/cpu_linux.h
 read_config.lo: mibgroup/target/snmpTargetAddrEntry.h
 read_config.lo: mibgroup/target/snmpTargetParamsEntry.h
 read_config.lo: mibgroup/target/target.h
@@ -500,7 +550,6 @@ read_config.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyF
 read_config.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable_data_access.h
 
 # contents below built automatically by configure; do not edit by hand
-snmp_vars.lo: mibgroup/snmpv3/usmConf.h
 snmp_vars.lo: mibgroup/mibII/vacm_conf.h
 snmp_vars.lo: mibgroup/agentx/master.h
 snmp_vars.lo: mibgroup/agentx/subagent.h
@@ -514,30 +563,43 @@ snmp_vars.lo: mibgroup/agentx/agentx_config.h
 # contents below built automatically by configure; do not edit by hand
 mib_modules.lo: mibgroup/ingres/imadb/dmfcache/dmfTable.h
 mib_modules.lo: mibgroup/ingres/statistics/statistics.h
+mib_modules.lo: mibgroup/ingres/imadb/meminfo/memInfoTable.h
 mib_modules.lo: mibgroup/default_modules.h
 mib_modules.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_interface.h
 mib_modules.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.h
 mib_modules.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.h
 mib_modules.lo: mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.h
-mib_modules.lo: mibgroup/snmpv3mibs.h
+mib_modules.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_interface.h
+mib_modules.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.h
+mib_modules.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.h
+mib_modules.lo: mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.h
 mib_modules.lo: mibgroup/mibII/snmp_mib.h
 mib_modules.lo: mibgroup/mibII/system_mib.h
 mib_modules.lo: mibgroup/mibII/sysORTable.h
 mib_modules.lo: mibgroup/mibII/vacm_vars.h
-mib_modules.lo: mibgroup/ucd-snmp/proc.h
-mib_modules.lo: mibgroup/ucd-snmp/logmatch.h
+mib_modules.lo: mibgroup/ucd_snmp.h
 mib_modules.lo: mibgroup/notification.h
 mib_modules.lo: mibgroup/notification-log-mib.h
 mib_modules.lo: mibgroup/agentx.h
 mib_modules.lo: mibgroup/disman/event.h
 mib_modules.lo: mibgroup/disman/schedule.h
 mib_modules.lo: mibgroup/utilities.h
-mib_modules.lo: mibgroup/snmpv3/snmpEngine.h
-mib_modules.lo: mibgroup/snmpv3/snmpMPDStats.h
-mib_modules.lo: mibgroup/snmpv3/usmStats.h
-mib_modules.lo: mibgroup/snmpv3/usmUser.h
 mib_modules.lo: mibgroup/util_funcs.h
 mib_modules.lo: mibgroup/mibII/vacm_context.h
+mib_modules.lo: mibgroup/ucd-snmp/proc.h
+mib_modules.lo: mibgroup/ucd-snmp/versioninfo.h
+mib_modules.lo: mibgroup/ucd-snmp/pass.h
+mib_modules.lo: mibgroup/ucd-snmp/pass_persist.h
+mib_modules.lo: mibgroup/ucd-snmp/disk.h
+mib_modules.lo: mibgroup/ucd-snmp/loadave.h
+mib_modules.lo: mibgroup/agent/extend.h
+mib_modules.lo: mibgroup/ucd-snmp/errormib.h
+mib_modules.lo: mibgroup/ucd-snmp/file.h
+mib_modules.lo: mibgroup/ucd-snmp/dlmod.h
+mib_modules.lo: mibgroup/ucd-snmp/proxy.h
+mib_modules.lo: mibgroup/ucd-snmp/logmatch.h
+mib_modules.lo: mibgroup/ucd-snmp/memory.h
+mib_modules.lo: mibgroup/ucd-snmp/vmstat.h
 mib_modules.lo: mibgroup/notification/snmpNotifyTable.h
 mib_modules.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable.h
 mib_modules.lo: mibgroup/notification/snmpNotifyFilterProfileTable.h
@@ -562,9 +624,15 @@ mib_modules.lo: mibgroup/disman/schedule/schedCore.h
 mib_modules.lo: mibgroup/disman/schedule/schedConf.h
 mib_modules.lo: mibgroup/disman/schedule/schedTable.h
 mib_modules.lo: mibgroup/utilities/override.h
+mib_modules.lo: mibgroup/hardware/memory.h
+mib_modules.lo: mibgroup/hardware/cpu.h
 mib_modules.lo: mibgroup/header_complex.h
 mib_modules.lo: mibgroup/target.h
 mib_modules.lo: mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.h
+mib_modules.lo: mibgroup/hardware/memory/hw_mem.h
+mib_modules.lo: mibgroup/hardware/memory/memory_linux.h
+mib_modules.lo: mibgroup/hardware/cpu/cpu.h
+mib_modules.lo: mibgroup/hardware/cpu/cpu_linux.h
 mib_modules.lo: mibgroup/target/snmpTargetAddrEntry.h
 mib_modules.lo: mibgroup/target/snmpTargetParamsEntry.h
 mib_modules.lo: mibgroup/target/target.h

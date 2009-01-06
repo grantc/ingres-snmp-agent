@@ -11,7 +11,7 @@
 #   MakeMaker Parameters:
 
 #     CCFLAGS => q[-I../../../include -g -O2 -Ulinux -Dlinux=linux -I. -I/usr/local/include -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pipe -Wdeclaration-after-statement -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/include/gdbm]
-#     LIBS => q[-L../../../snmplib/.libs -L../../../snmplib/ -L/usr/local/lib -lnetsnmp /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm]
+#     LIBS => q[-L../../../snmplib/.libs -L../../../snmplib/ -L/usr/local/lib -lnetsnmp]
 #     NAME => q[NetSNMP::agent::default_store]
 #     VERSION_FROM => q[default_store.pm]
 #     XSPROTOARG => q[-prototypes]
@@ -257,10 +257,10 @@ MPOLLUTE =
 # NetSNMP::agent::default_store might depend on some other libraries:
 # See ExtUtils::Liblist for details
 #
-EXTRALIBS = -L/home/glen/snmp_agent/perl/agent/default_store/../../../snmplib/.libs -L/home/glen/snmp_agent/perl/agent/default_store/../../../snmplib -L/usr/local/lib -lnetsnmp
-LDLOADLIBS = -L/home/glen/snmp_agent/perl/agent/default_store/../../../snmplib/.libs -L/home/glen/snmp_agent/perl/agent/default_store/../../../snmplib -L/usr/local/lib -lnetsnmp -lcrypt -lpthread -lm
+EXTRALIBS = -L/usr/local/src/net-snmp-5.4.1/perl/agent/default_store/../../../snmplib/.libs -L/usr/local/src/net-snmp-5.4.1/perl/agent/default_store/../../../snmplib -L/usr/local/lib -lnetsnmp
+LDLOADLIBS = -L/usr/local/src/net-snmp-5.4.1/perl/agent/default_store/../../../snmplib/.libs -L/usr/local/src/net-snmp-5.4.1/perl/agent/default_store/../../../snmplib -L/usr/local/lib -lnetsnmp
 BSLOADLIBS = 
-LD_RUN_PATH = /home/glen/snmp_agent/perl/agent/default_store/../../../snmplib/.libs
+LD_RUN_PATH = /usr/local/src/net-snmp-5.4.1/perl/agent/default_store/../../../snmplib/.libs
 
 
 # --- MakeMaker const_cccmd section:

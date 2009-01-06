@@ -2,24 +2,36 @@
 module_list_c= \
 	ingres/imadb/dmfcache/dmfTable.c \
 	ingres/statistics/statistics.c \
+	ingres/imadb/meminfo/memInfoTable.c \
 	ingres/imadb/dmfcache/dmfTable_interface.c \
 	ingres/imadb/dmfcache/dmfTable_data_access.c \
 	ingres/imadb/dmfcache/dmfTable_data_get.c \
 	ingres/imadb/dmfcache/dmfTable_data_set.c \
+	ingres/imadb/meminfo/memInfoTable_interface.c \
+	ingres/imadb/meminfo/memInfoTable_data_access.c \
+	ingres/imadb/meminfo/memInfoTable_data_get.c \
+	ingres/imadb/meminfo/memInfoTable_data_set.c \
 	mibII/snmp_mib.c \
 	mibII/system_mib.c \
 	mibII/sysORTable.c \
 	mibII/vacm_vars.c \
-	ucd-snmp/proc.c \
-	ucd-snmp/logmatch.c \
-	snmpv3/snmpEngine.c \
-	snmpv3/snmpMPDStats.c \
-	snmpv3/usmStats.c \
-	snmpv3/usmConf.c \
-	snmpv3/usmUser.c \
 	util_funcs.c \
 	mibII/vacm_context.c \
 	mibII/vacm_conf.c \
+	ucd-snmp/proc.c \
+	ucd-snmp/versioninfo.c \
+	ucd-snmp/pass.c \
+	ucd-snmp/pass_persist.c \
+	ucd-snmp/disk.c \
+	ucd-snmp/loadave.c \
+	agent/extend.c \
+	ucd-snmp/errormib.c \
+	ucd-snmp/file.c \
+	ucd-snmp/dlmod.c \
+	ucd-snmp/proxy.c \
+	ucd-snmp/logmatch.c \
+	ucd-snmp/memory.c \
+	ucd-snmp/vmstat.c \
 	notification/snmpNotifyTable.c \
 	notification/snmpNotifyFilterProfileTable.c \
 	notification-log-mib/notification_log.c \
@@ -53,6 +65,10 @@ module_list_c= \
 	agentx/client.c \
 	agentx/master_admin.c \
 	agentx/agentx_config.c \
+	hardware/memory/hw_mem.c \
+	hardware/memory/memory_linux.c \
+	hardware/cpu/cpu.c \
+	hardware/cpu/cpu_linux.c \
 	target/snmpTargetAddrEntry.c \
 	target/snmpTargetParamsEntry.c \
 	target/target.c \

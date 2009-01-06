@@ -1,0 +1,259 @@
+--- memInfoTable_data_access.c	2008-08-12 14:40:03.000000000 +0100
++++ /usr/local/src/net-snmp-5.4.1/agent/mibgroup/ingres/imadb/meminfo/.new//memInfoTable_data_access.c	2008-08-12 14:50:57.000000000 +0100
+@@ -90,23 +90,32 @@ memInfoTable_init_data(memInfoTable_regi
+  *
+  * @param container_ptr_ptr A pointer to a container pointer. If you
+  *        create a custom container, use this parameter to return it
+  *        to the MFD helper. If set to NULL, the MFD helper will
+  *        allocate a container for you.
++ * @param  cache A pointer to a cache structure. You can set the timeout
++ *         and other cache flags using this pointer.
+  *
+  *  This function is called at startup to allow you to customize certain
+  *  aspects of the access method. For the most part, it is for advanced
+  *  users. The default code should suffice for most cases. If no custom
+  *  container is allocated, the MFD code will create one for your.
+  *
++ *  This is also the place to set up cache behavior. The default, to
++ *  simply set the cache timeout, will work well with the default
++ *  container. If you are using a custom container, you may want to
++ *  look at the cache helper documentation to see if there are any
++ *  flags you want to set.
++ *
+  * @remark
+  *  This would also be a good place to do any initialization needed
+  *  for you data source. For example, opening a connection to another
+  *  process that will supply the data, opening a database, etc.
+  */
+ void
+-memInfoTable_container_init(netsnmp_container ** container_ptr_ptr)
++memInfoTable_container_init(netsnmp_container ** container_ptr_ptr,
++                            netsnmp_cache * cache)
+ {
+     DEBUGMSGTL(("verbose:memInfoTable:memInfoTable_container_init",
+                 "called\n"));
+ 
+     if (NULL == container_ptr_ptr) {
+@@ -119,10 +128,25 @@ memInfoTable_container_init(netsnmp_cont
+      * For advanced users, you can use a custom container. If you
+      * do not create one, one will be created for you.
+      */
+     *container_ptr_ptr = NULL;
+ 
++    if (NULL == cache) {
++        snmp_log(LOG_ERR,
++                 "bad cache param to memInfoTable_container_init\n");
++        return;
++    }
++
++    /*
++     * TODO:345:A: Set up memInfoTable cache properties.
++     *
++     * Also for advanced users, you can set parameters for the
++     * cache. Do not change the magic pointer, as it is used
++     * by the MFD helper. To completely disable caching, set
++     * cache->enabled to 0.
++     */
++    cache->timeout = MEMINFOTABLE_CACHE_TIMEOUT;        /* seconds */
+ }                               /* memInfoTable_container_init */
+ 
+ /**
+  * container shutdown
+  *
+@@ -155,10 +179,13 @@ memInfoTable_container_shutdown(netsnmp_
+ 
+ /**
+  * load initial data
+  *
+  * TODO:350:M: Implement memInfoTable data load
++ * This function will also be called by the cache helper to load
++ * the container again (after the container free function has been
++ * called to free the previous contents).
+  *
+  * @param container container to which items should be inserted
+  *
+  * @retval MFD_SUCCESS              : success.
+  * @retval MFD_RESOURCE_UNAVAILABLE : Can't access data source
+--- memInfoTable_data_access.h	2008-08-12 14:40:03.000000000 +0100
++++ /usr/local/src/net-snmp-5.4.1/agent/mibgroup/ingres/imadb/meminfo/.new//memInfoTable_data_access.h	2008-08-12 14:50:57.000000000 +0100
+@@ -37,20 +37,30 @@ extern          "C" {
+ 
+     int             memInfoTable_init_data(memInfoTable_registration *
+                                            memInfoTable_reg);
+ 
+ 
++    /*
++     * TODO:180:o: Review memInfoTable cache timeout.
++     * The number of seconds before the cache times out
++     */
++#define MEMINFOTABLE_CACHE_TIMEOUT   60
++
+     void            memInfoTable_container_init(netsnmp_container **
+-                                                container_ptr_ptr);
++                                                container_ptr_ptr,
++                                                netsnmp_cache * cache);
+     void            memInfoTable_container_shutdown(netsnmp_container *
+                                                     container_ptr);
+ 
+     int             memInfoTable_container_load(netsnmp_container *
+                                                 container);
+     void            memInfoTable_container_free(netsnmp_container *
+                                                 container);
+ 
++    int             memInfoTable_cache_load(netsnmp_container * container);
++    void            memInfoTable_cache_free(netsnmp_container * container);
++
+     /*
+      ***************************************************
+      ***             START EXAMPLE CODE              ***
+      ***---------------------------------------------***/
+     /*
+--- memInfoTable_interface.c	2008-08-12 14:40:03.000000000 +0100
++++ /usr/local/src/net-snmp-5.4.1/agent/mibgroup/ingres/imadb/meminfo/.new//memInfoTable_interface.c	2008-08-12 14:50:56.000000000 +0100
+@@ -59,10 +59,11 @@
+  * OID: .1.3.6.1.4.1.757.5.1.2, length: 10
+  */
+ typedef struct memInfoTable_interface_ctx_s {
+ 
+     netsnmp_container *container;
++    netsnmp_cache  *cache;
+ 
+     memInfoTable_registration *user_ctx;
+ 
+     netsnmp_table_registration_info tbl_info;
+ 
+@@ -255,10 +256,19 @@ _memInfoTable_initialize_interface(memIn
+         netsnmp_container_table_handler_get(tbl_info,
+                                             memInfoTable_if_ctx.container,
+                                             TABLE_CONTAINER_KEY_NETSNMP_INDEX);
+     netsnmp_inject_handler(reginfo, handler);
+ 
++    /*************************************************
++     *
++     * inject cache helper
++     */
++    if (NULL != memInfoTable_if_ctx.cache) {
++        handler = netsnmp_cache_handler_get(memInfoTable_if_ctx.cache);
++        netsnmp_inject_handler(reginfo, handler);
++    }
++
+     /*
+      * register table
+      */
+     netsnmp_register_table(reginfo, tbl_info);
+ 
+@@ -767,10 +777,54 @@ _mfd_memInfoTable_get_values(netsnmp_mib
+ /***********************************************************************
+  *
+  * DATA ACCESS
+  *
+  ***********************************************************************/
++static void     _container_free(netsnmp_container * container);
++
++/**
++ * @internal
++ */
++static int
++_cache_load(netsnmp_cache * cache, void *vmagic)
++{
++    DEBUGMSGTL(("internal:memInfoTable:_cache_load", "called\n"));
++
++    if ((NULL == cache) || (NULL == cache->magic)) {
++        snmp_log(LOG_ERR, "invalid cache for memInfoTable_cache_load\n");
++        return -1;
++    }
++
++    /** should only be called for an invalid or expired cache */
++    netsnmp_assert((0 == cache->valid) || (1 == cache->expired));
++
++    /*
++     * call user code
++     */
++    return memInfoTable_container_load((netsnmp_container *) cache->magic);
++}                               /* _cache_load */
++
++/**
++ * @internal
++ */
++static void
++_cache_free(netsnmp_cache * cache, void *magic)
++{
++    netsnmp_container *container;
++
++    DEBUGMSGTL(("internal:memInfoTable:_cache_free", "called\n"));
++
++    if ((NULL == cache) || (NULL == cache->magic)) {
++        snmp_log(LOG_ERR, "invalid cache in memInfoTable_cache_free\n");
++        return;
++    }
++
++    container = (netsnmp_container *) cache->magic;
++
++    _container_free(container);
++}                               /* _cache_free */
++
+ /**
+  * @internal
+  */
+ static void
+ _container_item_free(memInfoTable_rowreq_ctx * rowreq_ctx, void *context)
+@@ -819,22 +873,36 @@ _memInfoTable_container_init(memInfoTabl
+ {
+     DEBUGMSGTL(("internal:memInfoTable:_memInfoTable_container_init",
+                 "called\n"));
+ 
+     /*
+-     * container init
++     * cache init
+      */
+-    memInfoTable_container_init(&if_ctx->container);
++    if_ctx->cache = netsnmp_cache_create(30,    /* timeout in seconds */
++                                         _cache_load, _cache_free,
++                                         memInfoTable_oid,
++                                         memInfoTable_oid_size);
++
++    if (NULL == if_ctx->cache) {
++        snmp_log(LOG_ERR, "error creating cache for memInfoTable\n");
++        return;
++    }
++
++    if_ctx->cache->flags = NETSNMP_CACHE_DONT_INVALIDATE_ON_SET;
++
++    memInfoTable_container_init(&if_ctx->container, if_ctx->cache);
+     if (NULL == if_ctx->container)
+         if_ctx->container =
+             netsnmp_container_find("memInfoTable:table_container");
+     if (NULL == if_ctx->container) {
+         snmp_log(LOG_ERR, "error creating container in "
+                  "memInfoTable_container_init\n");
+         return;
+     }
+ 
++    if (NULL != if_ctx->cache)
++        if_ctx->cache->magic = (void *) if_ctx->container;
+ }                               /* _memInfoTable_container_init */
+ 
+ /**
+  * @internal
+  * shutdown the container with functions or wrappers
+--- memInfoTable-README-memInfoTable.txt	2008-08-12 14:40:03.000000000 +0100
++++ /usr/local/src/net-snmp-5.4.1/agent/mibgroup/ingres/imadb/meminfo/.new//memInfoTable-README-memInfoTable.txt	2008-08-12 14:50:56.000000000 +0100
+@@ -195,10 +195,18 @@ File: memInfoTable_data_access.[c|h]
+     store your data in the agent/sub-agent.
+ 
+     ... to be continued...
+ 
+ 
++  cache summary
++  ------------------------
++    The container-cached data access code is for cases when you want to
++    cache your data in the agent/sub-agent.
++
++    ... to be continued...
++
++
+ 
+ 
+ File: memInfoTable_enums.h
+ ------------------------------------------------------------------------
+   This file contains macros for mapping enumeration values when the

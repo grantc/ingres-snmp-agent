@@ -253,6 +253,9 @@ dmfTable_container_load(netsnmp_container * container)
 
         DEBUGMSGTL(("verbose:dmfTable","Connected to database\n"));
 
+	EXEC SQL execute procedure ima_set_vnode_domain;
+        DEBUGMSGTL(("verbose:dmfTable","Vnode domain set\n"));
+
     /*
      * TODO:351:M: |-> Load/update data in the dmfTable container.
      * loop over your dmfTable data, allocate a rowreq context,

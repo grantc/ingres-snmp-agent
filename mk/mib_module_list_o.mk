@@ -2,22 +2,35 @@
 mib_module_list_o= \
 	ingres/imadb/dmfcache/dmfTable.o \
 	ingres/statistics/statistics.o \
+	ingres/imadb/meminfo/memInfoTable.o \
 	ingres/imadb/dmfcache/dmfTable_interface.o \
 	ingres/imadb/dmfcache/dmfTable_data_access.o \
 	ingres/imadb/dmfcache/dmfTable_data_get.o \
 	ingres/imadb/dmfcache/dmfTable_data_set.o \
+	ingres/imadb/meminfo/memInfoTable_interface.o \
+	ingres/imadb/meminfo/memInfoTable_data_access.o \
+	ingres/imadb/meminfo/memInfoTable_data_get.o \
+	ingres/imadb/meminfo/memInfoTable_data_set.o \
 	mibII/snmp_mib.o \
 	mibII/system_mib.o \
 	mibII/sysORTable.o \
 	mibII/vacm_vars.o \
-	ucd-snmp/proc.o \
-	ucd-snmp/logmatch.o \
-	snmpv3/snmpEngine.o \
-	snmpv3/snmpMPDStats.o \
-	snmpv3/usmStats.o \
-	snmpv3/usmUser.o \
 	util_funcs.o \
 	mibII/vacm_context.o \
+	ucd-snmp/proc.o \
+	ucd-snmp/versioninfo.o \
+	ucd-snmp/pass.o \
+	ucd-snmp/pass_persist.o \
+	ucd-snmp/disk.o \
+	ucd-snmp/loadave.o \
+	agent/extend.o \
+	ucd-snmp/errormib.o \
+	ucd-snmp/file.o \
+	ucd-snmp/dlmod.o \
+	ucd-snmp/proxy.o \
+	ucd-snmp/logmatch.o \
+	ucd-snmp/memory.o \
+	ucd-snmp/vmstat.o \
 	notification/snmpNotifyTable.o \
 	notification/snmpNotifyFilterProfileTable.o \
 	notification-log-mib/notification_log.o \
@@ -43,6 +56,10 @@ mib_module_list_o= \
 	utilities/override.o \
 	header_complex.o \
 	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.o \
+	hardware/memory/hw_mem.o \
+	hardware/memory/memory_linux.o \
+	hardware/cpu/cpu.o \
+	hardware/cpu/cpu_linux.o \
 	target/snmpTargetAddrEntry.o \
 	target/snmpTargetParamsEntry.o \
 	target/target.o \

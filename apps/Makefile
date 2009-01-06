@@ -171,13 +171,13 @@ USEAGENTLIBS	= $(MIBLIB) $(AGENTLIB) $(HELPERLIB) $(USELIBS)
 #
 # link path in src dir
 LOCAL_LIBS	= -L../snmplib/.libs -L../snmplib -L../agent/.libs -L../agent -L../agent/helpers/.libs -L../agent/helpers
-LIBS		= $(USELIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm
+LIBS		= $(USELIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread
 PERLLDOPTS_FOR_APPS = 
 PERLLDOPTS_FOR_LIBS = 
 
 #
 # hack for compiling trapd when agent is disabled
-TRAPDWITHAGENT  = $(USETRAPLIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm
+TRAPDWITHAGENT  = $(USETRAPLIBS) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread
 TRAPDWITHOUTAGENT = $(LIBS)
 
 # these will be set by configure to one of the above 2 lines

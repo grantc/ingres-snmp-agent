@@ -2,22 +2,35 @@
 mibgroup_list_lo= \
 	mibgroup/ingres/imadb/dmfcache/dmfTable.lo \
 	mibgroup/ingres/statistics/statistics.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_interface.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.lo \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_interface.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.lo \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.lo \
 	mibgroup/mibII/snmp_mib.lo \
 	mibgroup/mibII/system_mib.lo \
 	mibgroup/mibII/sysORTable.lo \
 	mibgroup/mibII/vacm_vars.lo \
-	mibgroup/ucd-snmp/proc.lo \
-	mibgroup/ucd-snmp/logmatch.lo \
-	mibgroup/snmpv3/snmpEngine.lo \
-	mibgroup/snmpv3/snmpMPDStats.lo \
-	mibgroup/snmpv3/usmStats.lo \
-	mibgroup/snmpv3/usmUser.lo \
 	mibgroup/util_funcs.lo \
 	mibgroup/mibII/vacm_context.lo \
+	mibgroup/ucd-snmp/proc.lo \
+	mibgroup/ucd-snmp/versioninfo.lo \
+	mibgroup/ucd-snmp/pass.lo \
+	mibgroup/ucd-snmp/pass_persist.lo \
+	mibgroup/ucd-snmp/disk.lo \
+	mibgroup/ucd-snmp/loadave.lo \
+	mibgroup/agent/extend.lo \
+	mibgroup/ucd-snmp/errormib.lo \
+	mibgroup/ucd-snmp/file.lo \
+	mibgroup/ucd-snmp/dlmod.lo \
+	mibgroup/ucd-snmp/proxy.lo \
+	mibgroup/ucd-snmp/logmatch.lo \
+	mibgroup/ucd-snmp/memory.lo \
+	mibgroup/ucd-snmp/vmstat.lo \
 	mibgroup/notification/snmpNotifyTable.lo \
 	mibgroup/notification/snmpNotifyFilterProfileTable.lo \
 	mibgroup/notification-log-mib/notification_log.lo \
@@ -43,6 +56,10 @@ mibgroup_list_lo= \
 	mibgroup/utilities/override.lo \
 	mibgroup/header_complex.lo \
 	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo \
+	mibgroup/hardware/memory/hw_mem.lo \
+	mibgroup/hardware/memory/memory_linux.lo \
+	mibgroup/hardware/cpu/cpu.lo \
+	mibgroup/hardware/cpu/cpu_linux.lo \
 	mibgroup/target/snmpTargetAddrEntry.lo \
 	mibgroup/target/snmpTargetParamsEntry.lo \
 	mibgroup/target/target.lo \

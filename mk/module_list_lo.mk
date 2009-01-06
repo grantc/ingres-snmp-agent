@@ -2,24 +2,36 @@
 module_list_lo= \
 	ingres/imadb/dmfcache/dmfTable.lo \
 	ingres/statistics/statistics.lo \
+	ingres/imadb/meminfo/memInfoTable.lo \
 	ingres/imadb/dmfcache/dmfTable_interface.lo \
 	ingres/imadb/dmfcache/dmfTable_data_access.lo \
 	ingres/imadb/dmfcache/dmfTable_data_get.lo \
 	ingres/imadb/dmfcache/dmfTable_data_set.lo \
+	ingres/imadb/meminfo/memInfoTable_interface.lo \
+	ingres/imadb/meminfo/memInfoTable_data_access.lo \
+	ingres/imadb/meminfo/memInfoTable_data_get.lo \
+	ingres/imadb/meminfo/memInfoTable_data_set.lo \
 	mibII/snmp_mib.lo \
 	mibII/system_mib.lo \
 	mibII/sysORTable.lo \
 	mibII/vacm_vars.lo \
-	ucd-snmp/proc.lo \
-	ucd-snmp/logmatch.lo \
-	snmpv3/snmpEngine.lo \
-	snmpv3/snmpMPDStats.lo \
-	snmpv3/usmStats.lo \
-	snmpv3/usmConf.lo \
-	snmpv3/usmUser.lo \
 	util_funcs.lo \
 	mibII/vacm_context.lo \
 	mibII/vacm_conf.lo \
+	ucd-snmp/proc.lo \
+	ucd-snmp/versioninfo.lo \
+	ucd-snmp/pass.lo \
+	ucd-snmp/pass_persist.lo \
+	ucd-snmp/disk.lo \
+	ucd-snmp/loadave.lo \
+	agent/extend.lo \
+	ucd-snmp/errormib.lo \
+	ucd-snmp/file.lo \
+	ucd-snmp/dlmod.lo \
+	ucd-snmp/proxy.lo \
+	ucd-snmp/logmatch.lo \
+	ucd-snmp/memory.lo \
+	ucd-snmp/vmstat.lo \
 	notification/snmpNotifyTable.lo \
 	notification/snmpNotifyFilterProfileTable.lo \
 	notification-log-mib/notification_log.lo \
@@ -53,6 +65,10 @@ module_list_lo= \
 	agentx/client.lo \
 	agentx/master_admin.lo \
 	agentx/agentx_config.lo \
+	hardware/memory/hw_mem.lo \
+	hardware/memory/memory_linux.lo \
+	hardware/cpu/cpu.lo \
+	hardware/cpu/cpu_linux.lo \
 	target/snmpTargetAddrEntry.lo \
 	target/snmpTargetParamsEntry.lo \
 	target/target.lo \

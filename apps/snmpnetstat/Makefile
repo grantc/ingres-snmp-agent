@@ -141,7 +141,7 @@ TARG= snmpnetstat$(EXEEXT)
 CPPFLAGS= $(TOP_INCLUDES)  
 
 USELIBS= ../../snmplib/libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION)
-LIBS=	 ../../snmplib/libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm
+LIBS=	 ../../snmplib/libnetsnmp.$(LIB_EXTENSION)$(LIB_VERSION) /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread
 
 all: standardall
 

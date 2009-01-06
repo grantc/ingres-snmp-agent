@@ -12,7 +12,7 @@
 
 #     CCFLAGS => q[-I../../include -g -O2 -Ulinux -Dlinux=linux -I. -I/usr/local/include -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pipe -Wdeclaration-after-statement -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/include/gdbm]
 #     LDDLFLAGS => q[-shared -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m32 -march=i386 -mtune=generic -fasynchronous-unwind-tables -L/usr/local/lib  ]
-#     LIBS => q[-L../../snmplib/.libs -L../../snmplib/ -L/usr/local/lib -lnetsnmp /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm]
+#     LIBS => q[-L../../snmplib/.libs -L../../snmplib/ -L/usr/local/lib -lnetsnmp]
 #     MAN3PODS => { SNMP.pm=>q[$(INST_MAN3DIR)/SNMP.3] }
 #     NAME => q[SNMP]
 #     VERSION_FROM => q[SNMP.pm]
@@ -262,10 +262,10 @@ MPOLLUTE =
 # SNMP might depend on some other libraries:
 # See ExtUtils::Liblist for details
 #
-EXTRALIBS = -L/home/glen/snmp_agent/perl/SNMP/../../snmplib/.libs -L/home/glen/snmp_agent/perl/SNMP/../../snmplib -L/usr/local/lib -lnetsnmp
-LDLOADLIBS = -L/home/glen/snmp_agent/perl/SNMP/../../snmplib/.libs -L/home/glen/snmp_agent/perl/SNMP/../../snmplib -L/usr/local/lib -lnetsnmp -lcrypt -lpthread -lm
+EXTRALIBS = -L/usr/local/src/net-snmp-5.4.1/perl/SNMP/../../snmplib/.libs -L/usr/local/src/net-snmp-5.4.1/perl/SNMP/../../snmplib -L/usr/local/lib -lnetsnmp
+LDLOADLIBS = -L/usr/local/src/net-snmp-5.4.1/perl/SNMP/../../snmplib/.libs -L/usr/local/src/net-snmp-5.4.1/perl/SNMP/../../snmplib -L/usr/local/lib -lnetsnmp
 BSLOADLIBS = 
-LD_RUN_PATH = /home/glen/snmp_agent/perl/SNMP/../../snmplib/.libs
+LD_RUN_PATH = /usr/local/src/net-snmp-5.4.1/perl/SNMP/../../snmplib/.libs
 
 
 # --- MakeMaker const_cccmd section:

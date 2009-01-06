@@ -1,0 +1,685 @@
+INGRES-MIB DEFINITIONS ::= BEGIN
+    IMPORTS
+    NOTIFICATION-TYPE, MODULE-IDENTITY, enterprises,
+    OBJECT-TYPE, Integer32
+        FROM SNMPv2-SMI
+    NOTIFICATION-GROUP, OBJECT-GROUP
+        FROM SNMPv2-CONF
+    DisplayString
+        FROM SNMPv2-TC;
+
+    module MODULE-IDENTITY
+        LAST-UPDATED        "200803010931Z"
+        ORGANIZATION        "Ingres Corporation"
+        CONTACT-INFO        "Glen Bremner-Stokes     
+                            glen@ingres.com"
+        DESCRIPTION         "MIB for Ingres databases."
+
+        REVISION            "200803010931Z"
+        DESCRIPTION         "initial version of this module"
+        ::= { ingres 1 }
+
+
+    ingres OBJECT IDENTIFIER ::= { enterprises 757 }
+
+    notifications OBJECT IDENTIFIER ::= { module 0 }
+
+    logmon NOTIFICATION-TYPE
+        STATUS              current
+        DESCRIPTION         "This trap can be sent if a log match is found.
+                            Edit snmpd.conf to configure the required log
+                            matches."
+        ::= { notifications 1 }
+
+    procmon NOTIFICATION-TYPE
+        STATUS              current
+        DESCRIPTION         "This trap can be sent from the monitored host
+                            when a specified ingres process is not running.
+                            The varbind contains the failed process name.
+                            Edit snmpd.conf on the target host to customise
+                            the names and frequency of process monitoring."
+        ::= { notifications 2 }
+
+    objects OBJECT IDENTIFIER ::= { module 1 }
+
+    conformance OBJECT IDENTIFIER ::= { module 2 }
+
+    ingresCompliances OBJECT IDENTIFIER ::= { conformance 1 }
+
+    ingresGroups OBJECT IDENTIFIER ::= { conformance 2 }
+
+    ingresMibAllNotifications NOTIFICATION-GROUP
+        NOTIFICATIONS       {
+                                logmon,
+                                procmon
+                            }
+        STATUS              current
+        DESCRIPTION         "This automatically created notification group
+                            contains all notifications that do not belong
+                            to any other NOTIFICATION-GROUP"
+        ::= { ingresGroups 1 }
+
+    ingresMibAllObjects OBJECT-GROUP
+        OBJECTS {           
+                        logWritersBusy,
+                        maxWriteQueueLength,
+                        maxWriteQueueCount,
+                        logWaits,
+                        splitBuffer,
+                        freeBuffer,
+                        lastBuf,
+                        logFullStall,
+                        totalLocks,
+                        totalResources,
+                        locksPerTransaction,
+                        locksInUse,
+                        resourcesInUse,
+                        lockListsInUse,
+                        totalLockLists,
+                        lockHashTable,
+                        resourceHashTable,
+                        lockWait,
+                        deadlock,
+                        highwaterLBK,
+                        highwaterSBK,
+                        highwaterRBK,
+                        server,
+                        pagesize,
+                        forceCount,
+                        ioWaitCount,
+                        groupBufferReadCount,
+                        groupBufferWriteCount,
+                        fixCount,
+                        unfixCount,
+                        readCount,
+                        writeCount,
+                        hitCount,
+                        dirtyUnfixCount,
+                        pagesStillValid,
+                        pagesInvalid,
+                        bufferCount,
+                        pageBufferCount,
+                        fLimit,
+                        mLimit,
+                        wbStart,
+                        wbEnd,
+                        hashBucketCount,
+                        groupBufferCount,
+                        groupBufferSize,
+                        cacheStatus,
+                        freeBufferCount,
+                        freeBufferWaiters,
+                        fixedBufferCount,
+                        modifiedBufferCount,
+                        freeGroupBufferCount,
+                        fixedGroupBufferCount,
+                        modifiedGroupBufferCount,
+                        memInfoServer,
+                        memInfoBytesUsed,
+                        memInfoFreePages,
+                        memInfoGetPages,
+                        memInfoPagesUsed
+                }
+        STATUS              current
+        DESCRIPTION         "This automatically created object group contains
+                            all those objects that do not belong to any other
+                            OBJECT-GROUP"
+        ::= { ingresGroups 2 }
+
+    regids OBJECT IDENTIFIER ::= { ingres 2 }
+
+    common OBJECT IDENTIFIER ::= { ingres 3 }
+
+    products OBJECT IDENTIFIER ::= { ingres 4 }
+
+    experimental OBJECT IDENTIFIER ::= { ingres 5 }
+
+    imadb OBJECT IDENTIFIER ::= { experimental 1 }
+
+    dmfTable OBJECT-TYPE
+        SYNTAX              SEQUENCE OF DmfEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { imadb 1 }
+
+    dmfEntry OBJECT-TYPE
+        SYNTAX              DmfEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        INDEX               {
+                                server,
+                                pagesize
+                            }
+        ::= { dmfTable 1 }
+
+    DmfEntry ::= SEQUENCE {
+        server
+            DisplayString,
+        pagesize
+            INTEGER,
+        forceCount
+            INTEGER,
+        ioWaitCount
+            INTEGER,
+        groupBufferReadCount
+            INTEGER,
+        groupBufferWriteCount
+            Integer32,
+        fixCount
+            Integer32,
+        unfixCount
+            INTEGER,
+        readCount
+            INTEGER,
+        writeCount
+            INTEGER,
+        hitCount
+            INTEGER,
+        dirtyUnfixCount
+            INTEGER,
+        pagesStillValid
+            INTEGER,
+        pagesInvalid
+            INTEGER,
+        bufferCount
+            INTEGER,
+        pageBufferCount
+            INTEGER,
+        fLimit
+            INTEGER,
+        mLimit
+            INTEGER,
+        wbStart
+            INTEGER,
+        wbEnd
+            INTEGER,
+        hashBucketCount
+            INTEGER,
+        groupBufferCount
+            INTEGER,
+        groupBufferSize
+            INTEGER,
+        cacheStatus
+            INTEGER,
+        freeBufferCount
+            INTEGER,
+        freeBufferWaiters
+            INTEGER,
+        fixedBufferCount
+            INTEGER,
+        modifiedBufferCount
+            INTEGER,
+        freeGroupBufferCount
+            INTEGER,
+        fixedGroupBufferCount
+            INTEGER,
+        modifiedGroupBufferCount
+            INTEGER
+    }
+
+    server OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 1 }
+
+    pagesize OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 2 }
+
+    forceCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 3 }
+
+    ioWaitCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 4 }
+
+    groupBufferReadCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 5 }
+
+    groupBufferWriteCount OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 6 }
+
+    fixCount OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 7 }
+
+    unfixCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 8 }
+
+    readCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 9 }
+
+    writeCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 10 }
+
+    hitCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 11 }
+
+    dirtyUnfixCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 12 }
+
+    pagesStillValid OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 13 }
+
+    pagesInvalid OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 14 }
+
+    bufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 15 }
+
+    pageBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 16 }
+
+    fLimit OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 17 }
+
+    mLimit OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 18 }
+
+    wbStart OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 19 }
+
+    wbEnd OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 20 }
+
+    hashBucketCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 21 }
+
+    groupBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 22 }
+
+    groupBufferSize OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 23 }
+
+    cacheStatus OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 24 }
+
+    freeBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 25 }
+
+    freeBufferWaiters OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 26 }
+
+    fixedBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 27 }
+
+    modifiedBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 28 }
+
+    freeGroupBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 29 }
+
+    fixedGroupBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 30 }
+
+    modifiedGroupBufferCount OBJECT-TYPE
+        SYNTAX              INTEGER
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { dmfEntry 31 }
+
+    memInfoTable OBJECT-TYPE
+        SYNTAX              SEQUENCE OF MemInfoEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { imadb 2 }
+
+    memInfoEntry OBJECT-TYPE
+        SYNTAX              MemInfoEntry
+        MAX-ACCESS          not-accessible
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        INDEX               {
+                                memInfoServer
+                            }
+        ::= { memInfoTable 1 }
+
+    MemInfoEntry ::= SEQUENCE {
+        memInfoServer
+            DisplayString,
+        memInfoBytesUsed
+            Integer32,
+        memInfoFreePages
+            Integer32,
+        memInfoGetPages
+            Integer32,
+        memInfoPagesUsed
+            Integer32
+    }
+
+    memInfoServer OBJECT-TYPE
+        SYNTAX              DisplayString
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { memInfoEntry 1 }
+
+    memInfoBytesUsed OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { memInfoEntry 2 }
+
+    memInfoFreePages OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { memInfoEntry 3 }
+
+    memInfoGetPages OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { memInfoEntry 4 }
+
+    memInfoPagesUsed OBJECT-TYPE
+        SYNTAX              Integer32
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { memInfoEntry 5 }
+
+    statistics OBJECT IDENTIFIER ::= { experimental 2 }
+
+    --logstat -statistics
+    logstat OBJECT IDENTIFIER ::= { statistics 1 }
+
+    logWritersBusy OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "logwriters busy"
+        ::= { logstat 1 }
+
+    maxWriteQueueLength OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "write queue len"
+        ::= { logstat 2 }
+
+    maxWriteQueueCount OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "write queue cnt"
+        ::= { logstat 3 }
+
+    logWaits OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Log waits"
+        ::= { logstat 4 }
+
+    splitBuffer OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Split Buffer"
+        ::= { logstat 5 }
+
+    freeBuffer OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Free Buffer"
+        ::= { logstat 6 }
+
+    lastBuf OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Lastbuf"
+        ::= { logstat 7 }
+
+    logFullStall OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Logfull Stall"
+        ::= { logstat 8 }
+
+    --lockstat -summary
+    lockstat OBJECT IDENTIFIER ::= { statistics 2 }
+
+    totalLocks OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Total Locks"
+        ::= { lockstat 1 }
+
+    totalResources OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Total Resources"
+        ::= { lockstat 2 }
+
+    locksPerTransaction OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Locks per transaction"
+        ::= { lockstat 3 }
+
+    locksInUse OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Locks in use"
+        ::= { lockstat 4 }
+
+    resourcesInUse OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Resources in use"
+        ::= { lockstat 5 }
+
+    lockListsInUse OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Lock lists in use"
+        ::= { lockstat 6 }
+
+    totalLockLists OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Total lock lists"
+        ::= { lockstat 7 }
+
+    lockHashTable OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Lock hash table"
+        ::= { lockstat 8 }
+
+    resourceHashTable OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        REFERENCE           "Resource hash table"
+        ::= { lockstat 9 }
+
+    lockWait OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { lockstat 10 }
+
+    deadlock OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { lockstat 11 }
+
+    highwaterLBK OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { lockstat 12 }
+
+    highwaterSBK OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { lockstat 13 }
+
+    highwaterRBK OBJECT-TYPE
+        SYNTAX              OCTET STRING
+        MAX-ACCESS          read-only
+        STATUS              current
+        DESCRIPTION         "Please replace this text with your description."
+        ::= { lockstat 14 }
+
+
+END
+

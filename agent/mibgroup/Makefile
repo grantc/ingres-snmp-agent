@@ -144,22 +144,35 @@ OTHERCLEANTARGETS=
 mib_module_list_o= \
 	ingres/imadb/dmfcache/dmfTable.o \
 	ingres/statistics/statistics.o \
+	ingres/imadb/meminfo/memInfoTable.o \
 	ingres/imadb/dmfcache/dmfTable_interface.o \
 	ingres/imadb/dmfcache/dmfTable_data_access.o \
 	ingres/imadb/dmfcache/dmfTable_data_get.o \
 	ingres/imadb/dmfcache/dmfTable_data_set.o \
+	ingres/imadb/meminfo/memInfoTable_interface.o \
+	ingres/imadb/meminfo/memInfoTable_data_access.o \
+	ingres/imadb/meminfo/memInfoTable_data_get.o \
+	ingres/imadb/meminfo/memInfoTable_data_set.o \
 	mibII/snmp_mib.o \
 	mibII/system_mib.o \
 	mibII/sysORTable.o \
 	mibII/vacm_vars.o \
-	ucd-snmp/proc.o \
-	ucd-snmp/logmatch.o \
-	snmpv3/snmpEngine.o \
-	snmpv3/snmpMPDStats.o \
-	snmpv3/usmStats.o \
-	snmpv3/usmUser.o \
 	util_funcs.o \
 	mibII/vacm_context.o \
+	ucd-snmp/proc.o \
+	ucd-snmp/versioninfo.o \
+	ucd-snmp/pass.o \
+	ucd-snmp/pass_persist.o \
+	ucd-snmp/disk.o \
+	ucd-snmp/loadave.o \
+	agent/extend.o \
+	ucd-snmp/errormib.o \
+	ucd-snmp/file.o \
+	ucd-snmp/dlmod.o \
+	ucd-snmp/proxy.o \
+	ucd-snmp/logmatch.o \
+	ucd-snmp/memory.o \
+	ucd-snmp/vmstat.o \
 	notification/snmpNotifyTable.o \
 	notification/snmpNotifyFilterProfileTable.o \
 	notification-log-mib/notification_log.o \
@@ -185,6 +198,10 @@ mib_module_list_o= \
 	utilities/override.o \
 	header_complex.o \
 	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.o \
+	hardware/memory/hw_mem.o \
+	hardware/memory/memory_linux.o \
+	hardware/cpu/cpu.o \
+	hardware/cpu/cpu_linux.o \
 	target/snmpTargetAddrEntry.o \
 	target/snmpTargetParamsEntry.o \
 	target/target.o \
@@ -198,22 +215,35 @@ mib_module_list_o= \
 mib_module_list_lo= \
 	ingres/imadb/dmfcache/dmfTable.lo \
 	ingres/statistics/statistics.lo \
+	ingres/imadb/meminfo/memInfoTable.lo \
 	ingres/imadb/dmfcache/dmfTable_interface.lo \
 	ingres/imadb/dmfcache/dmfTable_data_access.lo \
 	ingres/imadb/dmfcache/dmfTable_data_get.lo \
 	ingres/imadb/dmfcache/dmfTable_data_set.lo \
+	ingres/imadb/meminfo/memInfoTable_interface.lo \
+	ingres/imadb/meminfo/memInfoTable_data_access.lo \
+	ingres/imadb/meminfo/memInfoTable_data_get.lo \
+	ingres/imadb/meminfo/memInfoTable_data_set.lo \
 	mibII/snmp_mib.lo \
 	mibII/system_mib.lo \
 	mibII/sysORTable.lo \
 	mibII/vacm_vars.lo \
-	ucd-snmp/proc.lo \
-	ucd-snmp/logmatch.lo \
-	snmpv3/snmpEngine.lo \
-	snmpv3/snmpMPDStats.lo \
-	snmpv3/usmStats.lo \
-	snmpv3/usmUser.lo \
 	util_funcs.lo \
 	mibII/vacm_context.lo \
+	ucd-snmp/proc.lo \
+	ucd-snmp/versioninfo.lo \
+	ucd-snmp/pass.lo \
+	ucd-snmp/pass_persist.lo \
+	ucd-snmp/disk.lo \
+	ucd-snmp/loadave.lo \
+	agent/extend.lo \
+	ucd-snmp/errormib.lo \
+	ucd-snmp/file.lo \
+	ucd-snmp/dlmod.lo \
+	ucd-snmp/proxy.lo \
+	ucd-snmp/logmatch.lo \
+	ucd-snmp/memory.lo \
+	ucd-snmp/vmstat.lo \
 	notification/snmpNotifyTable.lo \
 	notification/snmpNotifyFilterProfileTable.lo \
 	notification-log-mib/notification_log.lo \
@@ -239,6 +269,10 @@ mib_module_list_lo= \
 	utilities/override.lo \
 	header_complex.lo \
 	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.lo \
+	hardware/memory/hw_mem.lo \
+	hardware/memory/memory_linux.lo \
+	hardware/cpu/cpu.lo \
+	hardware/cpu/cpu_linux.lo \
 	target/snmpTargetAddrEntry.lo \
 	target/snmpTargetParamsEntry.lo \
 	target/target.lo \
@@ -252,22 +286,35 @@ mib_module_list_lo= \
 mib_module_list_c= \
 	ingres/imadb/dmfcache/dmfTable.c \
 	ingres/statistics/statistics.c \
+	ingres/imadb/meminfo/memInfoTable.c \
 	ingres/imadb/dmfcache/dmfTable_interface.c \
 	ingres/imadb/dmfcache/dmfTable_data_access.c \
 	ingres/imadb/dmfcache/dmfTable_data_get.c \
 	ingres/imadb/dmfcache/dmfTable_data_set.c \
+	ingres/imadb/meminfo/memInfoTable_interface.c \
+	ingres/imadb/meminfo/memInfoTable_data_access.c \
+	ingres/imadb/meminfo/memInfoTable_data_get.c \
+	ingres/imadb/meminfo/memInfoTable_data_set.c \
 	mibII/snmp_mib.c \
 	mibII/system_mib.c \
 	mibII/sysORTable.c \
 	mibII/vacm_vars.c \
-	ucd-snmp/proc.c \
-	ucd-snmp/logmatch.c \
-	snmpv3/snmpEngine.c \
-	snmpv3/snmpMPDStats.c \
-	snmpv3/usmStats.c \
-	snmpv3/usmUser.c \
 	util_funcs.c \
 	mibII/vacm_context.c \
+	ucd-snmp/proc.c \
+	ucd-snmp/versioninfo.c \
+	ucd-snmp/pass.c \
+	ucd-snmp/pass_persist.c \
+	ucd-snmp/disk.c \
+	ucd-snmp/loadave.c \
+	agent/extend.c \
+	ucd-snmp/errormib.c \
+	ucd-snmp/file.c \
+	ucd-snmp/dlmod.c \
+	ucd-snmp/proxy.c \
+	ucd-snmp/logmatch.c \
+	ucd-snmp/memory.c \
+	ucd-snmp/vmstat.c \
 	notification/snmpNotifyTable.c \
 	notification/snmpNotifyFilterProfileTable.c \
 	notification-log-mib/notification_log.c \
@@ -293,6 +340,10 @@ mib_module_list_c= \
 	utilities/override.c \
 	header_complex.c \
 	snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.c \
+	hardware/memory/hw_mem.c \
+	hardware/memory/memory_linux.c \
+	hardware/cpu/cpu.c \
+	hardware/cpu/cpu_linux.c \
 	target/snmpTargetAddrEntry.c \
 	target/snmpTargetParamsEntry.c \
 	target/target.c \

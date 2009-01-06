@@ -1308,7 +1308,7 @@
 #define NETSNMP_SNMPV2AUTH  0x8000       /* V2 Authenticated requests only */
 
 /* default list of mibs to load */
-#define NETSNMP_DEFAULT_MIBS ":INGRES-MIB:UCD-SNMP-MIB:SNMP-VIEW-BASED-ACM-MIB:SNMP-COMMUNITY-MIB:DISMAN-EVENT-MIB:SNMP-FRAMEWORK-MIB:SNMP-MPD-MIB:SNMP-USER-BASED-SM-MIB:SNMP-NOTIFICATION-MIB:DISMAN-SCHEDULE-MIB:SNMP-TARGET-MIB:SNMPv2-TM"
+#define NETSNMP_DEFAULT_MIBS ":INGRES-MIB:SNMPv2-MIB:RFC1213-MIB:SNMP-VIEW-BASED-ACM-MIB:SNMP-COMMUNITY-MIB:UCD-SNMP-MIB:UCD-DEMO-MIB:DISMAN-EVENT-MIB:NET-SNMP-EXTEND-MIB:UCD-DLMOD-MIB:SNMP-NOTIFICATION-MIB:DISMAN-SCHEDULE-MIB:SNMP-TARGET-MIB:SNMPv2-TM"
 
 /* default location to look for mibs to load using the above tokens
    and/or those in the MIBS envrionment variable*/
@@ -1397,10 +1397,10 @@
 /* #undef NETSNMP_ENABLE_TESTING_CODE */
 
 /* If you don't have root access don't exit upon kmem errors */
-#define NETSNMP_NO_ROOT_ACCESS 1
+/* #undef NETSNMP_NO_ROOT_ACCESS */
 
 /* If we don't want to use kmem. */
-#define NETSNMP_NO_KMEM_USAGE 1
+/* #undef NETSNMP_NO_KMEM_USAGE */
 
 /* If you don't want the agent to report on variables it doesn't have data for */
 #define NETSNMP_NO_DUMMY_VALUES 1
@@ -1600,7 +1600,7 @@
 #define NETSNMP_LASTFIELD -1
 
 /* configure options specified */
-#define NETSNMP_CONFIGURE_OPTIONS "'--enable-mini-agent' '--disable-embedded-perl' '--with-mib-modules=ingres/imadb/dmfcache/dmfTable,ingres/statistics/statistics' '--with-defaults' '--with-default-snmp-version=2' '--disable-manuals' '--with-libs=/opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm' '--disable-applications' '--disable-scripts' '--without-root-access' '--without-kmem-usage'"
+#define NETSNMP_CONFIGURE_OPTIONS "'--disable-embedded-perl' '--with-mib-modules=ingres/imadb/dmfcache/dmfTable,ingres/statistics/statistics,ingres/imadb/meminfo/memInfoTable' '--with-default-snmp-version=2' '--with-defaults' '--disable-manuals' '--with-libs=/opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread'"
 
 /*  Pluggable transports.  */
 

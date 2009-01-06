@@ -122,7 +122,7 @@ MIBGROUP_INCLUDES       = $(SRC_MIBGROUP_INCLUDES)
 top_builddir	= .
 
 
-SUBDIRS		= snmplib  agent mibs
+SUBDIRS		= snmplib  agent apps local mibs
 TESTDIRS	= testing
 
 CPP		= gcc -E 					        \

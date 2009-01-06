@@ -2,22 +2,35 @@
 mibgroup_list_o= \
 	mibgroup/ingres/imadb/dmfcache/dmfTable.o \
 	mibgroup/ingres/statistics/statistics.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_interface.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_access.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_get.o \
 	mibgroup/ingres/imadb/dmfcache/dmfTable_data_set.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_interface.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_access.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_get.o \
+	mibgroup/ingres/imadb/meminfo/memInfoTable_data_set.o \
 	mibgroup/mibII/snmp_mib.o \
 	mibgroup/mibII/system_mib.o \
 	mibgroup/mibII/sysORTable.o \
 	mibgroup/mibII/vacm_vars.o \
-	mibgroup/ucd-snmp/proc.o \
-	mibgroup/ucd-snmp/logmatch.o \
-	mibgroup/snmpv3/snmpEngine.o \
-	mibgroup/snmpv3/snmpMPDStats.o \
-	mibgroup/snmpv3/usmStats.o \
-	mibgroup/snmpv3/usmUser.o \
 	mibgroup/util_funcs.o \
 	mibgroup/mibII/vacm_context.o \
+	mibgroup/ucd-snmp/proc.o \
+	mibgroup/ucd-snmp/versioninfo.o \
+	mibgroup/ucd-snmp/pass.o \
+	mibgroup/ucd-snmp/pass_persist.o \
+	mibgroup/ucd-snmp/disk.o \
+	mibgroup/ucd-snmp/loadave.o \
+	mibgroup/agent/extend.o \
+	mibgroup/ucd-snmp/errormib.o \
+	mibgroup/ucd-snmp/file.o \
+	mibgroup/ucd-snmp/dlmod.o \
+	mibgroup/ucd-snmp/proxy.o \
+	mibgroup/ucd-snmp/logmatch.o \
+	mibgroup/ucd-snmp/memory.o \
+	mibgroup/ucd-snmp/vmstat.o \
 	mibgroup/notification/snmpNotifyTable.o \
 	mibgroup/notification/snmpNotifyFilterProfileTable.o \
 	mibgroup/notification-log-mib/notification_log.o \
@@ -43,6 +56,10 @@ mibgroup_list_o= \
 	mibgroup/utilities/override.o \
 	mibgroup/header_complex.o \
 	mibgroup/snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable.o \
+	mibgroup/hardware/memory/hw_mem.o \
+	mibgroup/hardware/memory/memory_linux.o \
+	mibgroup/hardware/cpu/cpu.o \
+	mibgroup/hardware/cpu/cpu_linux.o \
 	mibgroup/target/snmpTargetAddrEntry.o \
 	mibgroup/target/snmpTargetParamsEntry.o \
 	mibgroup/target/target.o \

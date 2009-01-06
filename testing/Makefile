@@ -130,7 +130,7 @@ VPATH = $(srcdir)
 #TARG		= etest ktest misctest stest
 
 USELIBS		= ../snmplib/libsnmp.$(LIB_EXTENSION)$(LIB_VERSION)
-LIBS		= -L../snmplib $(CC_RUNTIME_ARG) -lsnmp /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lpthread -lm
+LIBS		= -L../snmplib $(CC_RUNTIME_ARG) -lsnmp /opt/Ingres/IngresII/ingres/lib/libingres.a -lcrypt -lm -lpthread
 
 PARSEOBJS	=
 

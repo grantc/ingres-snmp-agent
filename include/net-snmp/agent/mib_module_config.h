@@ -5,6 +5,9 @@
 /* Define if compiling with the ingres/statistics/statistics module files.  */
 #define USING_INGRES_STATISTICS_STATISTICS_MODULE 1
  
+/* Define if compiling with the ingres/imadb/meminfo/memInfoTable module files.  */
+#define USING_INGRES_IMADB_MEMINFO_MEMINFOTABLE_MODULE 1
+ 
 /* Define if compiling with the default_modules module files.  */
 #define USING_DEFAULT_MODULES_MODULE 1
  
@@ -20,8 +23,17 @@
 /* Define if compiling with the ingres/imadb/dmfcache/dmfTable_data_set module files.  */
 #define USING_INGRES_IMADB_DMFCACHE_DMFTABLE_DATA_SET_MODULE 1
  
-/* Define if compiling with the snmpv3mibs module files.  */
-#define USING_SNMPV3MIBS_MODULE 1
+/* Define if compiling with the ingres/imadb/meminfo/memInfoTable_interface module files.  */
+#define USING_INGRES_IMADB_MEMINFO_MEMINFOTABLE_INTERFACE_MODULE 1
+ 
+/* Define if compiling with the ingres/imadb/meminfo/memInfoTable_data_access module files.  */
+#define USING_INGRES_IMADB_MEMINFO_MEMINFOTABLE_DATA_ACCESS_MODULE 1
+ 
+/* Define if compiling with the ingres/imadb/meminfo/memInfoTable_data_get module files.  */
+#define USING_INGRES_IMADB_MEMINFO_MEMINFOTABLE_DATA_GET_MODULE 1
+ 
+/* Define if compiling with the ingres/imadb/meminfo/memInfoTable_data_set module files.  */
+#define USING_INGRES_IMADB_MEMINFO_MEMINFOTABLE_DATA_SET_MODULE 1
  
 /* Define if compiling with the mibII/snmp_mib module files.  */
 #define USING_MIBII_SNMP_MIB_MODULE 1
@@ -35,11 +47,8 @@
 /* Define if compiling with the mibII/vacm_vars module files.  */
 #define USING_MIBII_VACM_VARS_MODULE 1
  
-/* Define if compiling with the ucd-snmp/proc module files.  */
-#define USING_UCD_SNMP_PROC_MODULE 1
- 
-/* Define if compiling with the ucd-snmp/logmatch module files.  */
-#define USING_UCD_SNMP_LOGMATCH_MODULE 1
+/* Define if compiling with the ucd_snmp module files.  */
+#define USING_UCD_SNMP_MODULE 1
  
 /* Define if compiling with the notification module files.  */
 #define USING_NOTIFICATION_MODULE 1
@@ -59,23 +68,53 @@
 /* Define if compiling with the utilities module files.  */
 #define USING_UTILITIES_MODULE 1
  
-/* Define if compiling with the snmpv3/snmpEngine module files.  */
-#define USING_SNMPV3_SNMPENGINE_MODULE 1
- 
-/* Define if compiling with the snmpv3/snmpMPDStats module files.  */
-#define USING_SNMPV3_SNMPMPDSTATS_MODULE 1
- 
-/* Define if compiling with the snmpv3/usmStats module files.  */
-#define USING_SNMPV3_USMSTATS_MODULE 1
- 
-/* Define if compiling with the snmpv3/usmUser module files.  */
-#define USING_SNMPV3_USMUSER_MODULE 1
- 
 /* Define if compiling with the util_funcs module files.  */
 #define USING_UTIL_FUNCS_MODULE 1
  
 /* Define if compiling with the mibII/vacm_context module files.  */
 #define USING_MIBII_VACM_CONTEXT_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/proc module files.  */
+#define USING_UCD_SNMP_PROC_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/versioninfo module files.  */
+#define USING_UCD_SNMP_VERSIONINFO_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/pass module files.  */
+#define USING_UCD_SNMP_PASS_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/pass_persist module files.  */
+#define USING_UCD_SNMP_PASS_PERSIST_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/disk module files.  */
+#define USING_UCD_SNMP_DISK_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/loadave module files.  */
+#define USING_UCD_SNMP_LOADAVE_MODULE 1
+ 
+/* Define if compiling with the agent/extend module files.  */
+#define USING_AGENT_EXTEND_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/errormib module files.  */
+#define USING_UCD_SNMP_ERRORMIB_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/file module files.  */
+#define USING_UCD_SNMP_FILE_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/dlmod module files.  */
+#define USING_UCD_SNMP_DLMOD_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/proxy module files.  */
+#define USING_UCD_SNMP_PROXY_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/logmatch module files.  */
+#define USING_UCD_SNMP_LOGMATCH_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/memory module files.  */
+#define USING_UCD_SNMP_MEMORY_MODULE 1
+ 
+/* Define if compiling with the ucd-snmp/vmstat module files.  */
+#define USING_UCD_SNMP_VMSTAT_MODULE 1
  
 /* Define if compiling with the notification/snmpNotifyTable module files.  */
 #define USING_NOTIFICATION_SNMPNOTIFYTABLE_MODULE 1
@@ -149,6 +188,12 @@
 /* Define if compiling with the utilities/override module files.  */
 #define USING_UTILITIES_OVERRIDE_MODULE 1
  
+/* Define if compiling with the hardware/memory module files.  */
+#define USING_HARDWARE_MEMORY_MODULE 1
+ 
+/* Define if compiling with the hardware/cpu module files.  */
+#define USING_HARDWARE_CPU_MODULE 1
+ 
 /* Define if compiling with the header_complex module files.  */
 #define USING_HEADER_COMPLEX_MODULE 1
  
@@ -157,6 +202,18 @@
  
 /* Define if compiling with the snmp-notification-mib/snmpNotifyFilterTable/snmpNotifyFilterTable module files.  */
 #define USING_SNMP_NOTIFICATION_MIB_SNMPNOTIFYFILTERTABLE_SNMPNOTIFYFILTERTABLE_MODULE 1
+ 
+/* Define if compiling with the hardware/memory/hw_mem module files.  */
+#define USING_HARDWARE_MEMORY_HW_MEM_MODULE 1
+ 
+/* Define if compiling with the hardware/memory/memory_linux module files.  */
+#define USING_HARDWARE_MEMORY_MEMORY_LINUX_MODULE 1
+ 
+/* Define if compiling with the hardware/cpu/cpu module files.  */
+#define USING_HARDWARE_CPU_CPU_MODULE 1
+ 
+/* Define if compiling with the hardware/cpu/cpu_linux module files.  */
+#define USING_HARDWARE_CPU_CPU_LINUX_MODULE 1
  
 /* Define if compiling with the target/snmpTargetAddrEntry module files.  */
 #define USING_TARGET_SNMPTARGETADDRENTRY_MODULE 1
